@@ -682,5 +682,292 @@
       "km": 4.8,
       "network": "AMTS"
     }
+  ],
+  "placeWalks": [
+    {
+      "placeId": "msi_service_center",
+      "stationId": "thaltej",
+      "exitGate": "Gate 1",
+      "walkMin": 18,
+      "distKm": 1.4
+    },
+    {
+      "placeId": "msi_service_center",
+      "stationId": "thaltej",
+      "exitGate": "Gate 1",
+      "mode": "brts",
+      "brtsId": "thaltej_gam",
+      "brtsRideMin": 12,
+      "brtsStopName": "Iskon Cross Road",
+      "walkMin": 3
+    },
+    {
+      "placeId": "ahmedabad_railway_station",
+      "stationId": "kalupur_railway_station",
+      "exitGate": "Gate 2",
+      "walkMin": 5,
+      "distKm": 0.4
+    },
+    {
+      "placeId": "gandhinagar_railway_station",
+      "stationId": "mahatma_mandir",
+      "exitGate": "Gate 1",
+      "mode": "auto",
+      "autoMin": 22,
+      "autoCost": 80
+    },
+    {
+      "placeId": "svp_airport",
+      "stationId": "motera_stadium",
+      "exitGate": "Gate 1",
+      "mode": "auto",
+      "autoMin": 25,
+      "autoCost": 90
+    },
+    {
+      "placeId": "gujarat_university",
+      "stationId": "gujarat_university",
+      "exitGate": "Gate 1",
+      "walkMin": 4,
+      "distKm": 0.3
+    },
+    {
+      "placeId": "civil_hospital",
+      "stationId": "kalupur_railway_station",
+      "exitGate": "Gate 3",
+      "mode": "brts",
+      "brtsId": "kalupur_railway_station",
+      "brtsRideMin": 14,
+      "brtsStopName": "Civil Hospital",
+      "walkMin": 3
+    },
+    {
+      "placeId": "apmc_market",
+      "stationId": "apmc",
+      "exitGate": "Gate 1",
+      "walkMin": 4,
+      "distKm": 0.3
+    },
+    {
+      "placeId": "mahatma_mandir",
+      "stationId": "mahatma_mandir",
+      "exitGate": "Gate 1",
+      "walkMin": 5,
+      "distKm": 0.4
+    },
+    {
+      "placeId": "iim_ahmedabad",
+      "stationId": "thaltej",
+      "exitGate": "Gate 1",
+      "mode": "brts",
+      "brtsId": "thaltej_gam",
+      "brtsRideMin": 10,
+      "brtsStopName": "IIM Ahmedabad",
+      "walkMin": 4
+    },
+    {
+      "placeId": "iskcon_temple",
+      "stationId": "thaltej",
+      "exitGate": "Gate 1",
+      "mode": "brts",
+      "brtsId": "thaltej_gam",
+      "brtsRideMin": 11,
+      "brtsStopName": "Iskon Cross Road",
+      "walkMin": 2
+    },
+    {
+      "placeId": "ahmedabad_one_mall",
+      "stationId": "gujarat_university",
+      "exitGate": "Gate 1",
+      "walkMin": 12,
+      "distKm": 0.9
+    },
+    {
+      "placeId": "ahmedabad_one_mall",
+      "stationId": "thaltej",
+      "exitGate": "Gate 1",
+      "mode": "brts",
+      "brtsId": "thaltej_gam",
+      "brtsRideMin": 9,
+      "brtsStopName": "Iskon Cross Road",
+      "walkMin": 6
+    },
+    {
+      "placeId": "vastrapur_lake",
+      "stationId": "gujarat_university",
+      "exitGate": "Gate 1",
+      "walkMin": 14,
+      "distKm": 1.1
+    },
+    {
+      "placeId": "sabarmati_ashram",
+      "stationId": "sabarmati_railway_station",
+      "exitGate": "Gate 1",
+      "walkMin": 12,
+      "distKm": 0.9
+    },
+    {
+      "placeId": "riverfront_park",
+      "stationId": "usmanpura",
+      "exitGate": "Gate 1",
+      "walkMin": 6,
+      "distKm": 0.5
+    },
+    {
+      "placeId": "kankaria_lake",
+      "stationId": "kankaria_east",
+      "exitGate": "Gate 1",
+      "walkMin": 6,
+      "distKm": 0.5
+    },
+    {
+      "placeId": "narendra_modi_stadium",
+      "stationId": "motera_stadium",
+      "exitGate": "Gate 1",
+      "walkMin": 7,
+      "distKm": 0.6
+    },
+    {
+      "placeId": "science_city",
+      "stationId": "gurukul_road",
+      "exitGate": "Gate 1",
+      "mode": "auto",
+      "autoMin": 14,
+      "autoCost": 50
+    },
+    {
+      "placeId": "adalaj_stepwell",
+      "stationId": "koteshwar_road",
+      "exitGate": "Gate 1",
+      "mode": "auto",
+      "autoMin": 18,
+      "autoCost": 70
+    },
+    {
+      "placeId": "akshardham_temple",
+      "stationId": "akshardham",
+      "exitGate": "Gate 1",
+      "walkMin": 8,
+      "distKm": 0.6
+    },
+    {
+      "placeId": "gift_city",
+      "stationId": "gift_city",
+      "exitGate": "Gate 1",
+      "walkMin": 6,
+      "distKm": 0.5
+    },
+    {
+      "placeId": "pdpu",
+      "stationId": "pdpu",
+      "exitGate": "Gate 1",
+      "walkMin": 8,
+      "distKm": 0.6
+    },
+    {
+      "placeId": "infocity",
+      "stationId": "infocity",
+      "exitGate": "Gate 1",
+      "walkMin": 4,
+      "distKm": 0.3
+    },
+    {
+      "placeId": "himalaya_mall",
+      "stationId": "gurukul_road",
+      "exitGate": "Gate 1",
+      "walkMin": 10,
+      "distKm": 0.8
+    },
+    {
+      "placeId": "law_garden",
+      "stationId": "sp_stadium",
+      "exitGate": "Gate 2",
+      "walkMin": 8,
+      "distKm": 0.6
+    },
+    {
+      "placeId": "maninagar_plaza",
+      "stationId": "kankaria_east",
+      "exitGate": "Gate 1",
+      "mode": "brts",
+      "brtsId": "kankaria",
+      "brtsRideMin": 8,
+      "brtsStopName": "Maninagar",
+      "walkMin": 2
+    },
+    {
+      "placeId": "swaminarayan_temple_kalupur",
+      "stationId": "kalupur_railway_station",
+      "exitGate": "Gate 1",
+      "walkMin": 9,
+      "distKm": 0.7
+    },
+    {
+      "placeId": "sardar_patel_museum",
+      "stationId": "kalupur_railway_station",
+      "exitGate": "Gate 2",
+      "walkMin": 10,
+      "distKm": 0.8
+    },
+    {
+      "placeId": "gujarat_college",
+      "stationId": "paldi",
+      "exitGate": "Gate 2",
+      "walkMin": 10,
+      "distKm": 0.8
+    },
+    {
+      "placeId": "jivraj_park_market",
+      "stationId": "jivraj_park",
+      "exitGate": "Gate 1",
+      "walkMin": 4,
+      "distKm": 0.3
+    },
+    {
+      "placeId": "manek_chowk",
+      "stationId": "ghee_kanta",
+      "exitGate": "Gate 1",
+      "walkMin": 11,
+      "distKm": 0.9
+    },
+    {
+      "placeId": "gandhinagar_sector_16",
+      "stationId": "sector_16",
+      "exitGate": "Gate 1",
+      "walkMin": 4,
+      "distKm": 0.3
+    },
+    {
+      "placeId": "gandhinagar_sector_21",
+      "stationId": "sachivalaya",
+      "exitGate": "Gate 1",
+      "walkMin": 7,
+      "distKm": 0.6
+    },
+    {
+      "placeId": "sargasan_hub",
+      "stationId": "sector_1",
+      "exitGate": "Gate 1",
+      "walkMin": 12,
+      "distKm": 0.9
+    },
+    {
+      "placeId": "zundal_circle",
+      "stationId": "koteshwar_road",
+      "exitGate": "Gate 1",
+      "mode": "auto",
+      "autoMin": 12,
+      "autoCost": 40
+    },
+    {
+      "placeId": "svp_airport",
+      "stationId": "kalupur_railway_station",
+      "exitGate": "Gate 2",
+      "mode": "brts",
+      "brtsId": "amts_airport",
+      "brtsStopName": "AMTS 10",
+      "walkMin": 4,
+      "network": "AMTS"
+    }
   ]
 }
