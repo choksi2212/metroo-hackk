@@ -24,6 +24,7 @@ export default function App() {
   const [lang, setLang] = useState(() => localStorage.getItem('atc_lang') || 'en')
   const [online, setOnline] = useState(navigator.onLine)
   const [screen, setScreen] = useState('home') // home | search | origin | routes | details | saved | map
+  const [mapFrom, setMapFrom] = useState('home') // where the map was opened from
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([])
   const [selectedPlace, setSelectedPlace] = useState(null)
@@ -174,7 +175,8 @@ export default function App() {
           <button className="icon-btn" aria-label={t.back || 'Back'} onClick={() => {
             if (screen === 'origin') setScreen('search')
             else if (screen === 'routes') setScreen('origin')
-            else if (screen === 'details' || screen === 'map') setScreen('routes')
+            else if (screen === 'details') setScreen('routes')
+            else if (screen === 'map') setScreen(mapFrom)
             else setScreen('home')
           }}>
             <ArrowLeft size={22} />
@@ -251,7 +253,7 @@ export default function App() {
               </div>
             </div>
 
-            <button className="btn btn-ghost map-btn" onClick={() => setScreen('map')}>
+            <button className="btn btn-ghost map-btn" onClick={() => { setMapFrom('home'); setScreen('map') }}>
               <MapIcon size={18} /> {t.networkMap}
             </button>
             <button className="btn btn-ghost" onClick={() => setScreen('saved')}>
@@ -364,7 +366,7 @@ export default function App() {
                 <button className="btn btn-primary" onClick={() => setScreen('details')}>
                   {t.routeDetails} <ArrowRight size={17} />
                 </button>
-                <button className="btn btn-ghost" onClick={() => setScreen('map')}>
+                <button className="btn btn-ghost" onClick={() => { setMapFrom('routes'); setScreen('map') }}>
                   <MapIcon size={17} /> {t.showOnMap}
                 </button>
                 <button className="btn btn-ghost" onClick={saveJourney}>
