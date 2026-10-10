@@ -269,9 +269,6 @@ metroo-hackk/
 │   ├── router.js               # Graph construction, Dijkstra, itineraries, fares
 │   └── styles.css              # Responsive transit design system
 ├── test-scenarios.mjs          # Route-engine fixture runner
-├── DEMO.md                     # Presentation walkthrough
-├── DEFENSE.md                  # Judge questions and technical talking points
-├── JUDGE_BRIEF.md              # One-page judging brief
 ├── OFFLINE-TEST.md             # Offline verification procedure
 └── SUBMISSION.md               # Hackathon submission summary
 ```
