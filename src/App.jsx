@@ -2,10 +2,10 @@ import React, { useEffect, useMemo, useState, useCallback } from 'react'
 import {
   Search, MapPin, Navigation, Wifi, WifiOff, Clock, IndianRupee, Footprints,
   TrainFront, BusFront, ArrowLeft, ArrowRight, Globe, Bookmark, BookmarkCheck,
-  Trash2, AlertTriangle, ShieldAlert, Undo2,
+  Trash2, AlertTriangle,
   ChevronRight, CircleDot, Map as MapIcon, ListChecks, RotateCcw,
   Building2, Stethoscope, GraduationCap, Plane, ShoppingBag, Landmark as LandmarkIcon,
-  Store, Wrench, Cpu, X
+  Store, Wrench, Cpu
 } from 'lucide-react'
 import { loadData, searchPlaces, getRecent, addRecent, getSaved, addSaved, removeSaved, nearestStations, haversine } from './data.js'
 import { planRoute, metroFare } from './router.js'
@@ -31,8 +31,6 @@ export default function App() {
   const [origin, setOrigin] = useState(null) // {type:'station', id} | {type:'current'}
   const [routes, setRoutes] = useState([])
   const [activeRoute, setActiveRoute] = useState(0)
-  const [disruptions, setDisruptions] = useState({ exits: [], interchanges: [], brts: [] })
-  const [fallbackReason, setFallbackReason] = useState(null)
   const [toast, setToast] = useState(null)
   const [saved, setSaved] = useState([])
   const [currentPos, setCurrentPos] = useState(null)
@@ -69,6 +67,11 @@ export default function App() {
     const finish = (pos) => {
       setCurrentPos(pos)
       setOrigin({ type: 'current' })
+      const near = nearestStations(data, pos.lat, pos.lng, 1)[0]
+      if (near?.s) {
+        setToast(tfmt('locationChosen', { station: near.s.name, distance: near.d.toFixed(1) }))
+        setTimeout(() => setToast(null), 3200)
+      }
       if (callback) callback({ type: 'current', pos })
     }
     const fail = (msg) => {
@@ -118,36 +121,10 @@ export default function App() {
     if (!originNode) return
 
     const destNode = `place:${selectedPlace.id}`
-    const variants = planRoute(data, originNode, destNode, disruptions)
+    const variants = planRoute(data, originNode, destNode, {})
     setRoutes(variants)
     setActiveRoute(0)
     setScreen('routes')
-  }
-
-  // Operator disruption demo: recalculate if route used a blocked exit/interchange
-  const toggleDisruption = (kind, id) => {
-    setDisruptions(prev => {
-      const next = { ...prev, [kind]: prev[kind].includes(id) ? prev[kind].filter(x => x !== id) : [...prev[kind], id] }
-      if (selectedPlace && routes.length) {
-        // recompute
-        const originNode = origin?.type === 'station' ? `st:${origin.id}` : origin?.type === 'place' ? `place:${origin.id}` : currentPos ? `st:${nearestStations(data, currentPos.lat, currentPos.lng, 1)[0].s.id}` : null
-        if (originNode) {
-          const variants = planRoute(data, originNode, `place:${selectedPlace.id}`, next)
-          const prevBest = routes[0]?.legs
-          if (variants.length) {
-            const newBest = variants[0].legs
-            const changed = JSON.stringify(newBest.map(l => l.to)) !== JSON.stringify(prevBest?.map(l => l.to))
-            setRoutes(variants)
-            setActiveRoute(0)
-            setFallbackReason(changed ? 'disruption' : null)
-          } else {
-            setRoutes([])
-            setFallbackReason('noRoute')
-          }
-        }
-      }
-      return next
-    })
   }
 
   const saveJourney = () => {
@@ -347,7 +324,7 @@ export default function App() {
             {routes.length === 0 && (
               <div className="fallback-note">
                 <AlertTriangle size={20} />
-                <p>{t.noResults || 'No route available under current disruptions.'}</p>
+                <p>{t.noResults || 'No route available.'}</p>
               </div>
             )}
             {routes.map((r, i) => (
@@ -389,55 +366,6 @@ export default function App() {
               </div>
             )}
 
-            <div className="demo-panel">
-              <h3><ShieldAlert size={16} /> {t.disruptions}</h3>
-              <p className="demo-note">Operator panel — simulate live disruptions to test fallback routing.</p>
-              <div className="demo-grid">
-                {(() => {
-                  if (!routes.length || !routes[activeRoute]) return null
-                  const legs = routes[activeRoute].legs
-                  const exitLeg = legs.find(l => l.type === 'walk' && l.exitGate)
-                  const stationIds = new Set()
-                  legs.forEach(l => { if (l.type === 'metro') { stationIds.add(l.fromId); stationIds.add(l.toId) } })
-                  const ic = data.connections.interchanges.filter(i => stationIds.has(i.stationId))
-                  const brtsUsed = legs.some(l => l.type === 'brts')
-                  return (
-                    <>
-                      {exitLeg && (() => {
-                        const ex = data.exitsArr.find(e => e.stationId === exitLeg.from?.split(':')[1] && e.gate === exitLeg.exitGate)
-                        const exitId = ex?.id
-                        return exitId ? (
-                          <button className={`demo-btn ${disruptions.exits.includes(exitId) ? 'demo-on' : ''}`} onClick={() => toggleDisruption('exits', exitId)}>
-                            <X size={14} /> {t.markExitUnavailable} ({exitLeg.exitGate})
-                          </button>
-                        ) : null
-                      })()}
-                      {ic.map(i => (
-                        <button key={i.stationId} className={`demo-btn ${disruptions.interchanges.includes(i.stationId) ? 'demo-on' : ''}`} onClick={() => toggleDisruption('interchanges', i.stationId)}>
-                          <X size={14} /> {t.markInterchangeUnavailable} ({data.stations[i.stationId]?.name})
-                        </button>
-                      ))}
-                      {brtsUsed && (
-                        <button className={`demo-btn ${disruptions.brts.length ? 'demo-on' : ''}`} onClick={() => { const leg = routes[activeRoute].legs.find(l => l.type === 'brts'); if (leg) toggleDisruption('brts', leg.from.split(':')[1]) }}>
-                          <X size={14} /> {t.markBrtsUnavailable}
-                        </button>
-                      )}
-                    </>
-                  )
-                })()}
-              </div>
-              {disruptions.exits.length + disruptions.interchanges.length + disruptions.brts.length > 0 && (
-                <button className="btn btn-ghost demo-clear" onClick={() => { setDisruptions({ exits: [], interchanges: [], brts: [] }); setFallbackReason(null); if (selectedPlace && origin) planFromOrigin(origin) }}>
-                  <Undo2 size={15} /> {t.clearDisruptions}
-                </button>
-              )}
-              {fallbackReason && (
-                <p className="fallback-note" role="alert">
-                  <AlertTriangle size={16} />
-                  {fallbackReason === 'disruption' ? tfmt('fallbackReason', { reason: t.markExitUnavailable }) : 'No route available — clear disruptions.'}
-                </p>
-              )}
-            </div>
           </section>
         )}
 

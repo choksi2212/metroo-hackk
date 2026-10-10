@@ -127,7 +127,7 @@ body {
   color: var(--ink-soft); margin-bottom: 10px;
 }
 section h2 { display: flex; align-items: center; gap: 8px; }
-.btn svg, .icon-btn svg, section h2 svg, .demo-panel h3 svg { flex-shrink: 0; }
+.btn svg, .icon-btn svg, section h2 svg { flex-shrink: 0; }
 
 .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
@@ -263,27 +263,6 @@ section h2 { display: flex; align-items: center; gap: 8px; }
 .route-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
 .route-actions .btn { flex: 1; justify-content: center; min-width: 140px; }
 
-/* ---------- Demo panel ---------- */
-.demo-panel {
-  margin-top: 18px; background: var(--card);
-  border: 1.5px dashed var(--line); border-radius: var(--radius);
-  padding: 14px 16px;
-}
-.demo-panel h3 { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--ink); }
-.demo-note { font-size: 0.72rem; color: var(--ink-soft); margin: 4px 0 10px; }
-.demo-grid { display: flex; flex-wrap: wrap; gap: 8px; }
-.demo-btn {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: #fef2f2; color: #991b1b;
-  border: 1.5px solid #fecaca; border-radius: 10px;
-  font-size: 0.78rem; font-weight: 700; padding: 8px 12px;
-  cursor: pointer; transition: all 0.2s; min-height: 44px; font-family: var(--font);
-}
-.demo-btn:hover { background: #fee2e2; }
-.demo-btn:focus-visible { outline: 3px solid var(--danger); outline-offset: 2px; }
-.demo-on { background: var(--danger); color: #fff; border-color: var(--danger); }
-.demo-clear { margin-top: 12px; width: 100%; justify-content: center; }
-
 .fallback-note {
   display: flex; align-items: center; gap: 10px;
   background: #fffbeb; border: 1px solid #fde68a; color: #92400e;
@@ -378,7 +357,7 @@ section h2 { display: flex; align-items: center; gap: 8px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ---------- Touch polish ---------- */
-.btn, .icon-btn, .chip, .place-card, .station-row, .demo-btn, .route-card, .lang-select select {
+.btn, .icon-btn, .chip, .place-card, .station-row, .route-card, .lang-select select {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
@@ -418,7 +397,6 @@ section h2 { display: flex; align-items: center; gap: 8px; }
   .route-head { gap: 8px; }
   .route-nums { gap: 10px; font-size: 0.78rem; }
   .detail-stats { gap: 12px; }
-  .demo-panel { padding: 12px; }
   .step { gap: 10px; }
 }
 
