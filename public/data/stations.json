@@ -333,5 +333,262 @@
     ],
     "parking": true,
     "interchange": false
+  },
+  {
+    "id": "apmc",
+    "name": "APMC",
+    "nameGu": "એ પી એમ સી",
+    "nameHi": "एपीएमसी",
+    "lat": 22.99774,
+    "lng": 72.53712,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (APMC wholesale market yard)",
+      "Gate 2 (Vasna side, Ashram Road south)"
+    ],
+    "parking": true,
+    "interchange": false
+  },
+  {
+    "id": "jivraj_park",
+    "name": "Jivraj Park",
+    "nameGu": "જીવરાજ પાર્ક",
+    "nameHi": "जीवराज पार्क",
+    "lat": 23.0055,
+    "lng": 72.53349,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Jivraj Park circle & market)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "rajiv_nagar",
+    "name": "Rajiv Nagar",
+    "nameGu": "રાજીવ નગર",
+    "nameHi": "राजीव नगर",
+    "lat": 23.00972,
+    "lng": 72.53675,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Rajiv Nagar residential)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "shreyas",
+    "name": "Shreyas",
+    "nameGu": "શ્રેયસ",
+    "nameHi": "श्रेयस",
+    "lat": 23.0136,
+    "lng": 72.54922,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Shreyas Crossing)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "paldi",
+    "name": "Paldi",
+    "nameGu": "પાલડી",
+    "nameHi": "पालडी",
+    "lat": 23.01851,
+    "lng": 72.56241,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Paldi bus stop & riverfront)",
+      "Gate 2 (Ashram Road, toward Khamasa)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "gandhigram",
+    "name": "Gandhigram",
+    "nameGu": "ગાંધીગ્રામ",
+    "nameHi": "गांधीग्राम",
+    "lat": 23.0271,
+    "lng": 72.56902,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Gandhigram educational campus)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "usmanpura",
+    "name": "Usmanpura",
+    "nameGu": "ઉસ્માનપુરા",
+    "nameHi": "उस्मानपुरा",
+    "lat": 23.04584,
+    "lng": 72.56498,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Usmanpura riverfront & malls)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "vijay_nagar",
+    "name": "Vijay Nagar",
+    "nameGu": "વિજય નગર",
+    "nameHi": "विजय नगर",
+    "lat": 23.05619,
+    "lng": 72.56234,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Vijay Nagar crossing)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "vadaj",
+    "name": "Vadaj",
+    "nameGu": "વાડજ",
+    "nameHi": "वाडज",
+    "lat": 23.06767,
+    "lng": 72.56576,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Vadaj BRTS terminal & bus stand)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "ranip",
+    "name": "Ranip",
+    "nameGu": "રાણીપ",
+    "nameHi": "रानीप",
+    "lat": 23.06767,
+    "lng": 72.57408,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Ranip crossing & Bhel tower)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "sabarmati_railway_station",
+    "name": "Sabarmati Railway Station",
+    "nameGu": "સાબરમતી રેલવે સ્ટેશન",
+    "nameHi": "साबरमती रेलवे स्टेशन",
+    "lat": 23.0722,
+    "lng": 72.5794,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Sabarmati railway station entrance, Indian Railways side)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "aec",
+    "name": "AEC",
+    "nameGu": "એ ઇ સી",
+    "nameHi": "एईसी",
+    "lat": 23.07511,
+    "lng": 72.59329,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Ahmedabad Education Trust campus)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "sabarmati",
+    "name": "Sabarmati",
+    "nameGu": "સાબરમતી",
+    "nameHi": "साबरमती",
+    "lat": 23.08563,
+    "lng": 72.59221,
+    "lines": [
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Sabarmati area & riverfront north)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "motera_stadium",
+    "name": "Motera Stadium",
+    "nameGu": "મોટેરા સ્ટેડિયમ",
+    "nameHi": "मोटेरा स्टेडियम",
+    "lat": 23.09677,
+    "lng": 72.59669,
+    "lines": [
+      "red",
+      "yellow"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Narendra Modi Stadium gate 1 area)",
+      "Gate 2 (Yellow Line concourse)",
+      "Gate 3 (Sardar Patel Ring Road)"
+    ],
+    "parking": true,
+    "interchange": true
   }
 ]
