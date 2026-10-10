@@ -58,19 +58,23 @@ export default function App() {
   useEffect(() => { loadData().then(setData).catch(e => { console.error('load failed', e); setLoadError(e?.message || String(e)) }) }, [])
   useEffect(() => { setSaved(getSaved()) }, [screen])
 
-  // Simulated geolocation for "Use current location" (demo-safe: defaults to Mahatma Mandir area)
-  const useCurrentLocation = () => {
-    const pos = { lat: 23.2240, lng: 72.5780, label: 'Mahatma Mandir (demo position)' }
-    if (navigator.geolocation && navigator.onLine !== false) {
+  // Simulated geolocation for "Use current location" (demo-safe: falls back to Mahatma Mandir area)
+  const useCurrentLocation = (callback) => {
+    const fallback = { lat: 23.2240, lng: 72.5780, label: 'Mahatma Mandir (demo position)' }
+    const finish = (pos) => {
+      setCurrentPos(pos)
+      setOrigin({ type: 'current' })
+      if (callback) callback({ type: 'current', pos })
+    }
+    if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
-        (p) => { setCurrentPos({ lat: p.coords.latitude, lng: p.coords.longitude, label: 'Current location' }) },
-        () => setCurrentPos(pos),
+        (p) => finish({ lat: p.coords.latitude, lng: p.coords.longitude, label: 'Current location' }),
+        () => finish(fallback),
         { timeout: 3000 }
       )
     } else {
-      setCurrentPos(pos)
+      finish(fallback)
     }
-    setOrigin({ type: 'current' })
   }
 
   const doSearch = (q) => {
@@ -82,12 +86,14 @@ export default function App() {
 
   const pickPlace = (p) => { setSelectedPlace(p); setScreen('origin') }
 
-  const planFromOrigin = (origin) => {
+  const planFromOrigin = (origin, posOverride) => {
     if (!selectedPlace) return
     let originNode = null
     if (origin?.type === 'station') originNode = `st:${origin.id}`
-    else if (origin?.type === 'current' && currentPos) {
-      const near = nearestStations(data, currentPos.lat, currentPos.lng, 1)[0]
+    else if (origin?.type === 'current') {
+      const pos = posOverride?.pos || currentPos
+      if (!pos) return
+      const near = nearestStations(data, pos.lat, pos.lng, 1)[0]
       originNode = `st:${near.s.id}`
     } else if (origin?.type === 'place') originNode = `place:${origin.id}`
     if (!originNode) return
@@ -211,7 +217,7 @@ export default function App() {
                 onChange={e => doSearch(e.target.value)}
               />
             </div>
-            <button className="btn btn-secondary current-btn" onClick={useCurrentLocation}>
+            <button className="btn btn-secondary current-btn" onClick={() => useCurrentLocation()}>
               <MapPin size={18} /> {t.useCurrentLocation}
             </button>
 
@@ -293,7 +299,7 @@ export default function App() {
             </div>
             <div className="home-section">
               <h2>{t.selectOrigin}</h2>
-              <button className="btn btn-secondary full" onClick={() => { useCurrentLocation(); planFromOrigin({ type: 'current' }) }}>
+              <button className="btn btn-secondary full" onClick={() => useCurrentLocation((o) => planFromOrigin(o))}>
                 <MapPin size={18} /> {t.useCurrentLocation}
               </button>
               <ul className="station-list">
