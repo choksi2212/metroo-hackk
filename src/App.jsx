@@ -20,6 +20,7 @@ const CATEGORY_ICONS = {
 
 export default function App() {
   const [data, setData] = useState(null)
+  const [loadError, setLoadError] = useState(null)
   const [lang, setLang] = useState(() => localStorage.getItem('atc_lang') || 'en')
   const [online, setOnline] = useState(navigator.onLine)
   const [screen, setScreen] = useState('home') // home | search | origin | routes | details | saved | map
@@ -54,7 +55,7 @@ export default function App() {
     window.addEventListener('offline', off)
     return () => { window.removeEventListener('online', on); window.removeEventListener('offline', off) }
   }, [])
-  useEffect(() => { loadData().then(setData).catch(e => console.error('load failed', e)) }, [])
+  useEffect(() => { loadData().then(setData).catch(e => { console.error('load failed', e); setLoadError(e?.message || String(e)) }) }, [])
   useEffect(() => { setSaved(getSaved()) }, [screen])
 
   // Simulated geolocation for "Use current location" (demo-safe: defaults to Mahatma Mandir area)
@@ -146,7 +147,7 @@ export default function App() {
     return (
       <div className="loading">
         <div className="loading-ring" aria-label="Loading" />
-        <p>Loading offline transit data…</p>
+        <p>{loadError ? `Data load error: ${loadError}` : 'Loading offline transit data…'}</p>
       </div>
     )
   }
