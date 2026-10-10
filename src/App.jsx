@@ -66,14 +66,20 @@ export default function App() {
       setOrigin({ type: 'current' })
       if (callback) callback({ type: 'current', pos })
     }
+    let done = false
+    const once = (pos) => { if (!done) { done = true; finish(pos) } }
+    // Hard deadline: never block the demo on a permission prompt
+    const guard = setTimeout(() => once(fallback), 2500)
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (p) => finish({ lat: p.coords.latitude, lng: p.coords.longitude, label: 'Current location' }),
-        () => finish(fallback),
-        { timeout: 3000 }
-      )
+      try {
+        navigator.geolocation.getCurrentPosition(
+          (p) => { clearTimeout(guard); once({ lat: p.coords.latitude, lng: p.coords.longitude, label: 'Current location' }) },
+          () => { clearTimeout(guard); once(fallback) },
+          { timeout: 2000 }
+        )
+      } catch { clearTimeout(guard); once(fallback) }
     } else {
-      finish(fallback)
+      clearTimeout(guard); once(fallback)
     }
   }
 
