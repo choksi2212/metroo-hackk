@@ -48,6 +48,10 @@ export default function App() {
     return s
   }, [t])
 
+  // Localized line name (falls back to English)
+  const lineName = (l) => t?.lines?.[l] || LINE_NAMES[l]
+
+
   useEffect(() => { if (data) addRecent(selectedPlace?.id) }, [selectedPlace])
   useEffect(() => { localStorage.setItem('atc_lang', lang) }, [lang])
   useEffect(() => {
@@ -358,7 +362,7 @@ export default function App() {
                   {r.legs.map((leg, j) => {
                     if (leg.type === 'metro') {
                       return <span key={j} className="leg-chip" style={{ borderColor: LINE_COLORS[leg.line], color: LINE_COLORS[leg.line] }}>
-                        <TrainFront size={13} /> {LINE_NAMES[leg.line]}
+                        <TrainFront size={13} /> {lineName(leg.line)}
                       </span>
                     }
                     if (leg.type === 'brts') return <span key={j} className="leg-chip leg-brts"><BusFront size={13} /> {leg.network === 'AMTS' ? 'AMTS' : 'BRTS'}</span>
@@ -507,7 +511,7 @@ export default function App() {
                   <p className="saved-meta">{j.originLabel} → {j.placeName} · {Math.round(j.totalMin)} min · ₹{j.cost} · {t[j.label]}</p>
                   <div className="route-lines">
                     {j.legs.map((leg, k) => (
-                      leg.type === 'metro' ? <span key={k} className="leg-chip" style={{ borderColor: LINE_COLORS[leg.line], color: LINE_COLORS[leg.line] }}><TrainFront size={13} /> {LINE_NAMES[leg.line]}</span> :
+                      leg.type === 'metro' ? <span key={k} className="leg-chip" style={{ borderColor: LINE_COLORS[leg.line], color: LINE_COLORS[leg.line] }}><TrainFront size={13} /> {lineName(leg.line)}</span> :
                       leg.type === 'brts' ? <span key={k} className="leg-chip leg-brts"><BusFront size={13} /> {(leg.network === 'AMTS' ? 'AMTS' : 'BRTS')}</span> :
                       leg.type === 'walk' ? <span key={k} className="leg-chip leg-walk"><Footprints size={13} /> {Math.round(leg.walkMin)}m</span> :
                       <span key={k} className="leg-chip leg-auto"><Navigation size={13} /> Auto</span>
