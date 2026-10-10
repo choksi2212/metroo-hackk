@@ -59,29 +59,37 @@ export default function App() {
   useEffect(() => { loadData().then(setData).catch(e => { console.error('load failed', e); setLoadError(e?.message || String(e)) }) }, [])
   useEffect(() => { setSaved(getSaved()) }, [screen])
 
-  // Simulated geolocation for "Use current location" (demo-safe: falls back to Mahatma Mandir area)
+  // Real geolocation only — no simulated position. If the browser can't give us a
+  // fix (permission denied, no GPS, airplane mode), we surface it honestly.
   const useCurrentLocation = (callback) => {
-    const fallback = { lat: 23.2240, lng: 72.5780, label: 'Mahatma Mandir (demo position)' }
     const finish = (pos) => {
       setCurrentPos(pos)
       setOrigin({ type: 'current' })
       if (callback) callback({ type: 'current', pos })
     }
-    let done = false
-    const once = (pos) => { if (!done) { done = true; finish(pos) } }
-    // Hard deadline: never block the demo on a permission prompt
-    const guard = setTimeout(() => once(fallback), 2500)
-    if (navigator.geolocation) {
-      try {
-        navigator.geolocation.getCurrentPosition(
-          (p) => { clearTimeout(guard); once({ lat: p.coords.latitude, lng: p.coords.longitude, label: 'Current location' }) },
-          () => { clearTimeout(guard); once(fallback) },
-          { timeout: 2000 }
-        )
-      } catch { clearTimeout(guard); once(fallback) }
-    } else {
-      clearTimeout(guard); once(fallback)
+    const fail = (msg) => {
+      setToast(msg)
+      setTimeout(() => setToast(null), 2600)
     }
+    if (!navigator.geolocation) {
+      fail(t.geoUnavailable || 'Location unavailable on this device — pick a station below.')
+      return
+    }
+    let done = false
+    const once = (fn, arg) => { if (!done) { done = true; fn(arg) } }
+    // Hard deadline: never leave the user stuck on a hanging permission prompt
+    const guard = setTimeout(() => once(fail, t.geoUnavailable || 'Location unavailable — pick a station below.'), 8000)
+    navigator.geolocation.getCurrentPosition(
+      (p) => { clearTimeout(guard); once(finish, { lat: p.coords.latitude, lng: p.coords.longitude, label: 'Current location' }) },
+      (err) => {
+        clearTimeout(guard)
+        const msg = err?.code === 1
+          ? (t.geoDenied || 'Location permission denied — pick a station below.')
+          : (t.geoUnavailable || 'Location unavailable — pick a station below.')
+        once(fail, msg)
+      },
+      { timeout: 7000, maximumAge: 60000 }
+    )
   }
 
   const doSearch = (q) => {

@@ -88,6 +88,8 @@
     "m": "m",
     "km": "km",
     "rs": "₹",
+    "geoUnavailable": "Location unavailable — pick a station below.",
+    "geoDenied": "Location permission denied — pick a station below.",
     "fareSplitTitle": "How the fare splits (one ticket, settled between operators)",
     "fareSplitNote": "Commuter pays once via NCMC; a transit clearinghouse settles each operator its leg fare. The clearinghouse is the PPP: privately run, operators pay per settled ticket."
   },
@@ -180,6 +182,8 @@
     "m": "मी",
     "km": "किमी",
     "rs": "₹",
+    "geoUnavailable": "स्थान उपलब्ध नहीं — नीचे स्टेशन चुनें।",
+    "geoDenied": "स्थान की अनुमति नहीं मिली — नीचे स्टेशन चुनें।",
     "fareSplitTitle": "किराया कैसे बाँटा जाता है (एक टिकट, ऑपरेटर्स के बीच सेटलमेंट)",
     "fareSplitNote": "यात्री NCMC से एक बार भुगतान करता है; एक ट्रांज़िट क्लियरिंगहाउस हर ऑपरेटर को उसके हिस्से का किराया देता है। यही PPP है: क्लियरिंगहाउस निजी रूप से संचालित है, ऑपरेटर सेटल टिकट के अनुसार भुगतान करते हैं।"
   },
@@ -272,6 +276,8 @@
     "m": "મી",
     "km": "કિમી",
     "rs": "₹",
+    "geoUnavailable": "સ્થાન ઉપલબ્ધ નથી — નીચે સ્ટેશન પસંદ કરો.",
+    "geoDenied": "સ્થાનની પરવાનગી નથી — નીચે સ્ટેશન પસંદ કરો.",
     "fareSplitTitle": "કિરાયો કેવી રીતે વહેંચાય છે (એક ટિકિટ, ઓપરેટરો વચ્ચે સેટલમેન્ટ)",
     "fareSplitNote": "પ્રવાસી NCMC થી એક જ વખત ચૂકવણી કરે છે; એક ટ્રાન્ઝિટ ક્લિયરિંગહાઉસ દરેક ઓપરેટરને તેના હિસ્સાનો કિરાયો આપે છે. આ જ PPP છે: ક્લિયરિંગહાઉસ ખાનગી રીતે ચાલે છે, ઓપરેટરો સેટલ થયેલા ટિકિટ પ્રમાણે ચૂકવે છે."
   }
