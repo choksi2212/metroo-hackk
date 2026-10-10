@@ -195,7 +195,9 @@ export default function App() {
           </button>
         )}
         <div className="brand">
-          <span className="brand-mark" aria-hidden="true"><Navigation size={18} /></span>
+          <span className="brand-mark" aria-hidden="true">
+            <img src="/icons/icon-192.svg" alt="" width="22" height="22" />
+          </span>
           <div className="brand-text">
             <h1>{t.appName}</h1>
             <p className="tagline">{t.tagline}</p>
@@ -389,7 +391,7 @@ export default function App() {
 
             <div className="demo-panel">
               <h3><ShieldAlert size={16} /> {t.disruptions}</h3>
-              <p className="demo-note">Demo only — judge can simulate failures.</p>
+              <p className="demo-note">Operator panel — simulate live disruptions to test fallback routing.</p>
               <div className="demo-grid">
                 {(() => {
                   if (!routes.length || !routes[activeRoute]) return null
