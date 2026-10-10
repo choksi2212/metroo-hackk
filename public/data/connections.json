@@ -1,0 +1,348 @@
+{
+  "metro": [
+    {
+      "from": "thaltej_gam",
+      "to": "thaltej",
+      "line": "blue",
+      "km": 1.0
+    },
+    {
+      "from": "thaltej",
+      "to": "doordarshan_kendra",
+      "line": "blue",
+      "km": 1.0
+    },
+    {
+      "from": "doordarshan_kendra",
+      "to": "gurukul_road",
+      "line": "blue",
+      "km": 1.1
+    },
+    {
+      "from": "gurukul_road",
+      "to": "gujarat_university",
+      "line": "blue",
+      "km": 1.2
+    },
+    {
+      "from": "gujarat_university",
+      "to": "commerce_six_roads",
+      "line": "blue",
+      "km": 1.1
+    },
+    {
+      "from": "commerce_six_roads",
+      "to": "sp_stadium",
+      "line": "blue",
+      "km": 0.8
+    },
+    {
+      "from": "sp_stadium",
+      "to": "old_high_court",
+      "line": "blue",
+      "km": 0.7
+    },
+    {
+      "from": "old_high_court",
+      "to": "shahpur",
+      "line": "blue",
+      "km": 0.9
+    },
+    {
+      "from": "shahpur",
+      "to": "ghee_kanta",
+      "line": "blue",
+      "km": 0.8
+    },
+    {
+      "from": "ghee_kanta",
+      "to": "kalupur_railway_station",
+      "line": "blue",
+      "km": 1.1
+    },
+    {
+      "from": "kalupur_railway_station",
+      "to": "kankaria_east",
+      "line": "blue",
+      "km": 2.0
+    },
+    {
+      "from": "kankaria_east",
+      "to": "apparel_park",
+      "line": "blue",
+      "km": 0.8
+    },
+    {
+      "from": "apparel_park",
+      "to": "amraiwadi",
+      "line": "blue",
+      "km": 1.3
+    },
+    {
+      "from": "amraiwadi",
+      "to": "rabari_colony",
+      "line": "blue",
+      "km": 1.0
+    },
+    {
+      "from": "rabari_colony",
+      "to": "vastral",
+      "line": "blue",
+      "km": 1.1
+    },
+    {
+      "from": "vastral",
+      "to": "nirant_cross_road",
+      "line": "blue",
+      "km": 1.2
+    },
+    {
+      "from": "nirant_cross_road",
+      "to": "vastral_gam",
+      "line": "blue",
+      "km": 1.0
+    },
+    {
+      "from": "apmc",
+      "to": "jivraj_park",
+      "line": "red",
+      "km": 1.0
+    },
+    {
+      "from": "jivraj_park",
+      "to": "rajiv_nagar",
+      "line": "red",
+      "km": 0.8
+    },
+    {
+      "from": "rajiv_nagar",
+      "to": "shreyas",
+      "line": "red",
+      "km": 0.8
+    },
+    {
+      "from": "shreyas",
+      "to": "paldi",
+      "line": "red",
+      "km": 0.9
+    },
+    {
+      "from": "paldi",
+      "to": "gandhigram",
+      "line": "red",
+      "km": 1.0
+    },
+    {
+      "from": "gandhigram",
+      "to": "old_high_court",
+      "line": "red",
+      "km": 1.1
+    },
+    {
+      "from": "old_high_court",
+      "to": "usmanpura",
+      "line": "red",
+      "km": 1.0
+    },
+    {
+      "from": "usmanpura",
+      "to": "vijay_nagar",
+      "line": "red",
+      "km": 0.7
+    },
+    {
+      "from": "vijay_nagar",
+      "to": "vadaj",
+      "line": "red",
+      "km": 0.8
+    },
+    {
+      "from": "vadaj",
+      "to": "ranip",
+      "line": "red",
+      "km": 1.0
+    },
+    {
+      "from": "ranip",
+      "to": "sabarmati_railway_station",
+      "line": "red",
+      "km": 0.9
+    },
+    {
+      "from": "sabarmati_railway_station",
+      "to": "aec",
+      "line": "red",
+      "km": 0.8
+    },
+    {
+      "from": "aec",
+      "to": "sabarmati",
+      "line": "red",
+      "km": 0.8
+    },
+    {
+      "from": "sabarmati",
+      "to": "motera_stadium",
+      "line": "red",
+      "km": 0.9
+    },
+    {
+      "from": "motera_stadium",
+      "to": "koteshwar_road",
+      "line": "yellow",
+      "km": 1.6
+    },
+    {
+      "from": "koteshwar_road",
+      "to": "vishwakarma_college",
+      "line": "yellow",
+      "km": 1.4
+    },
+    {
+      "from": "vishwakarma_college",
+      "to": "tapovan_circle",
+      "line": "yellow",
+      "km": 1.3
+    },
+    {
+      "from": "tapovan_circle",
+      "to": "narmada_canal",
+      "line": "yellow",
+      "km": 1.2
+    },
+    {
+      "from": "narmada_canal",
+      "to": "koba_circle",
+      "line": "yellow",
+      "km": 1.1
+    },
+    {
+      "from": "koba_circle",
+      "to": "juna_koba",
+      "line": "yellow",
+      "km": 1.0
+    },
+    {
+      "from": "juna_koba",
+      "to": "koba_gam",
+      "line": "yellow",
+      "km": 0.9
+    },
+    {
+      "from": "koba_gam",
+      "to": "gnlu",
+      "line": "yellow",
+      "km": 1.1
+    },
+    {
+      "from": "gnlu",
+      "to": "raysan",
+      "line": "yellow",
+      "km": 1.0
+    },
+    {
+      "from": "raysan",
+      "to": "randesan",
+      "line": "yellow",
+      "km": 0.8
+    },
+    {
+      "from": "randesan",
+      "to": "dholakuva_circle",
+      "line": "yellow",
+      "km": 0.9
+    },
+    {
+      "from": "dholakuva_circle",
+      "to": "infocity",
+      "line": "yellow",
+      "km": 0.8
+    },
+    {
+      "from": "infocity",
+      "to": "sector_1",
+      "km": 0.7,
+      "line": "yellow"
+    },
+    {
+      "from": "sector_1",
+      "to": "sector_10a",
+      "line": "yellow",
+      "km": 0.6
+    },
+    {
+      "from": "sector_10a",
+      "to": "sachivalaya",
+      "line": "yellow",
+      "km": 0.7
+    },
+    {
+      "from": "sachivalaya",
+      "to": "akshardham",
+      "line": "yellow",
+      "km": 0.8
+    },
+    {
+      "from": "akshardham",
+      "to": "juna_sachivalaya",
+      "line": "yellow",
+      "km": 0.7
+    },
+    {
+      "from": "juna_sachivalaya",
+      "to": "sector_16",
+      "line": "yellow",
+      "km": 0.7
+    },
+    {
+      "from": "sector_16",
+      "to": "sector_24",
+      "line": "yellow",
+      "km": 0.6
+    },
+    {
+      "from": "sector_24",
+      "to": "mahatma_mandir",
+      "line": "yellow",
+      "km": 0.8
+    },
+    {
+      "from": "gnlu",
+      "to": "pdpu",
+      "line": "violet",
+      "km": 1.0
+    },
+    {
+      "from": "pdpu",
+      "to": "gift_city",
+      "line": "violet",
+      "km": 1.1
+    }
+  ],
+  "interchanges": [
+    {
+      "stationId": "old_high_court",
+      "lines": [
+        "blue",
+        "red"
+      ],
+      "transferMin": 3
+    },
+    {
+      "stationId": "motera_stadium",
+      "lines": [
+        "red",
+        "yellow"
+      ],
+      "transferMin": 4
+    },
+    {
+      "stationId": "gnlu",
+      "lines": [
+        "yellow",
+        "violet"
+      ],
+      "transferMin": 3
+    }
+  ]
+}
