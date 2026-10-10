@@ -191,7 +191,9 @@ export function planRoute(data, originNode, destNode, disruptions = {}) {
       const legs = toItinerary(path, data)
       if (!legs.length) continue
       variants.push({ label, legs, totalMin: dist.get(destNode) })
-    } catch (err) { /* skip variant */ }
+    } catch (err) {
+      console.error('[route engine]', label, err)
+    }
   }
 
   // Compute per-variant cost & walk minutes; dedupe
