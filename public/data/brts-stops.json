@@ -1,0 +1,548 @@
+[
+  {
+    "id": "vadaj",
+    "name": "Vadaj",
+    "nameGu": "વડાજ",
+    "nameHi": "वडज",
+    "lat": 23.0622,
+    "lng": 72.5638,
+    "routes": [
+      "201",
+      "202",
+      "401",
+      "Shiva-Adalaj"
+    ],
+    "nearbyMetroStation": "vadaj"
+  },
+  {
+    "id": "usmanpura",
+    "name": "Usmanpura",
+    "nameGu": "ઉસ્માનપુરા",
+    "nameHi": "उस्मानपुरा",
+    "lat": 23.0543,
+    "lng": 72.566,
+    "routes": [
+      "201",
+      "202"
+    ],
+    "nearbyMetroStation": "usmanpura"
+  },
+  {
+    "id": "delhi_darwaja",
+    "name": "Delhi Darwaja",
+    "nameGu": "દિલ્હી દરવાજા",
+    "nameHi": "दिल्ली दरवाज़ा",
+    "lat": 23.0468,
+    "lng": 72.5706,
+    "routes": [
+      "201",
+      "202",
+      "301"
+    ],
+    "nearbyMetroStation": "shahpur"
+  },
+  {
+    "id": "gujarat_college",
+    "name": "Gujarat College",
+    "nameGu": "ગુજરાત કોલેજ",
+    "nameHi": "गुजरात कॉलेज",
+    "lat": 23.0232,
+    "lng": 72.5542,
+    "routes": [
+      "201",
+      "202",
+      "601"
+    ],
+    "nearbyMetroStation": "sp_stadium"
+  },
+  {
+    "id": "paldi",
+    "name": "Paldi",
+    "nameGu": "પાલડી",
+    "nameHi": "पालडी",
+    "lat": 23.0175,
+    "lng": 72.5688,
+    "routes": [
+      "201",
+      "202",
+      "502"
+    ],
+    "nearbyMetroStation": "paldi"
+  },
+  {
+    "id": "gandhigram",
+    "name": "Gandhigram",
+    "nameGu": "ગાંધીગ્રામ",
+    "nameHi": "गांधीग्राम",
+    "lat": 23.0132,
+    "lng": 72.5748,
+    "routes": [
+      "201",
+      "202",
+      "601"
+    ],
+    "nearbyMetroStation": "gandhigram"
+  },
+  {
+    "id": "jivraj_park",
+    "name": "Jivraj Park",
+    "nameGu": "જીવરાજ પાર્ક",
+    "nameHi": "जीवराज पार्क",
+    "lat": 23.0038,
+    "lng": 72.5692,
+    "routes": [
+      "201",
+      "501",
+      "750"
+    ],
+    "nearbyMetroStation": "jivraj_park"
+  },
+  {
+    "id": "apmc_market",
+    "name": "APMC Market",
+    "nameGu": "એ.પી.એમ.સી. માર્કેટ",
+    "nameHi": "एपीएमसी मार्केट",
+    "lat": 22.9992,
+    "lng": 72.5548,
+    "routes": [
+      "201",
+      "750"
+    ],
+    "nearbyMetroStation": "apmc"
+  },
+  {
+    "id": "svp_hospital",
+    "name": "SVP Hospital",
+    "nameGu": "એસ.વી.પી. હોસ્પિટલ",
+    "nameHi": "एस.वी.पी. अस्पताल",
+    "lat": 23.029,
+    "lng": 72.572,
+    "routes": [
+      "301",
+      "601"
+    ],
+    "nearbyMetroStation": "old_high_court"
+  },
+  {
+    "id": "thaltej_gam",
+    "name": "Thaltej Gam",
+    "nameGu": "ઠલતેજ ગામ",
+    "nameHi": "थालतेज गाम",
+    "lat": 23.038,
+    "lng": 72.512,
+    "routes": [
+      "401",
+      "700"
+    ],
+    "nearbyMetroStation": "thaltej"
+  },
+  {
+    "id": "thaltej",
+    "name": "Thaltej",
+    "nameGu": "ઠલતેજ",
+    "nameHi": "थालतेज",
+    "lat": 23.033,
+    "lng": 72.507,
+    "routes": [
+      "401",
+      "700"
+    ],
+    "nearbyMetroStation": "thaltej"
+  },
+  {
+    "id": "bodakdev",
+    "name": "Bodakdev",
+    "nameGu": "બોડકદેવ",
+    "nameHi": "बोडकदेव",
+    "lat": 23.0325,
+    "lng": 72.5145,
+    "routes": [
+      "401",
+      "700",
+      "750"
+    ],
+    "nearbyMetroStation": "thaltej"
+  },
+  {
+    "id": "iskon_cross_road",
+    "name": "Iskon Cross Road",
+    "nameGu": "ઇસ્કોન ક્રોસ રોડ",
+    "nameHi": "इस्कॉन क्रॉस रोड",
+    "lat": 23.0278,
+    "lng": 72.5165,
+    "routes": [
+      "401",
+      "700",
+      "750"
+    ],
+    "nearbyMetroStation": "thaltej"
+  },
+  {
+    "id": "gurukul",
+    "name": "Gurukul",
+    "nameGu": "ગુરુકુળ",
+    "nameHi": "गुरुकुल",
+    "lat": 23.0435,
+    "lng": 72.5495,
+    "routes": [
+      "401",
+      "700"
+    ],
+    "nearbyMetroStation": "gujarat_university"
+  },
+  {
+    "id": "navrangpura",
+    "name": "Navrangpura",
+    "nameGu": "નવરંગપુરા",
+    "nameHi": "नवरंगपुरा",
+    "lat": 23.0352,
+    "lng": 72.55,
+    "routes": [
+      "401",
+      "700",
+      "601"
+    ],
+    "nearbyMetroStation": "commerce_six_roads"
+  },
+  {
+    "id": "gujarat_university",
+    "name": "Gujarat University",
+    "nameGu": "ગુજરાત યુનિવર્સિટી",
+    "nameHi": "गुजरात विश्वविद्यालय",
+    "lat": 23.0348,
+    "lng": 72.5448,
+    "routes": [
+      "401",
+      "700",
+      "601"
+    ],
+    "nearbyMetroStation": "gujarat_university"
+  },
+  {
+    "id": "satellite",
+    "name": "Satellite",
+    "nameGu": "સેટેલાઇટ",
+    "nameHi": "सैटेलाइट",
+    "lat": 23.018,
+    "lng": 72.533,
+    "routes": [
+      "700",
+      "750",
+      "601"
+    ],
+    "nearbyMetroStation": null
+  },
+  {
+    "id": "ranip",
+    "name": "Ranip",
+    "nameGu": "રાણીપ",
+    "nameHi": "रानीप",
+    "lat": 23.09,
+    "lng": 72.581,
+    "routes": [
+      "Shiva-Adalaj"
+    ],
+    "nearbyMetroStation": "ranip"
+  },
+  {
+    "id": "motera_stadium",
+    "name": "Motera Stadium",
+    "nameGu": "મોટેરા સ્ટેડિયમ",
+    "nameHi": "मोटेरा स्टेडियम",
+    "lat": 23.0955,
+    "lng": 72.5868,
+    "routes": [
+      "Shiva-Adalaj"
+    ],
+    "nearbyMetroStation": "motera_stadium"
+  },
+  {
+    "id": "rto_circle",
+    "name": "RTO Circle",
+    "nameGu": "આર.ટી.ઓ. સર્કલ",
+    "nameHi": "आरटीओ सर्कल",
+    "lat": 23.0835,
+    "lng": 72.5895,
+    "routes": [
+      "1",
+      "2",
+      "101",
+      "301"
+    ],
+    "nearbyMetroStation": "ranip"
+  },
+  {
+    "id": "rakhiyal",
+    "name": "Rakhiyal",
+    "nameGu": "રાખિયાલ",
+    "nameHi": "राखियाल",
+    "lat": 23.0552,
+    "lng": 72.6148,
+    "routes": [
+      "1",
+      "101"
+    ],
+    "nearbyMetroStation": null
+  },
+  {
+    "id": "vatva",
+    "name": "Vatva",
+    "nameGu": "વટવા",
+    "nameHi": "वटवा",
+    "lat": 23.024,
+    "lng": 72.629,
+    "routes": [
+      "1",
+      "102",
+      "501"
+    ],
+    "nearbyMetroStation": null
+  },
+  {
+    "id": "krishna_nagar",
+    "name": "Krishna Nagar",
+    "nameGu": "કૃષ્ણનગર",
+    "nameHi": "कृष्णनगर",
+    "lat": 23.0138,
+    "lng": 72.6138,
+    "routes": [
+      "1",
+      "101",
+      "103"
+    ],
+    "nearbyMetroStation": null
+  },
+  {
+    "id": "maninagar",
+    "name": "Maninagar",
+    "nameGu": "મણિનગર",
+    "nameHi": "मणिनगर",
+    "lat": 23.003,
+    "lng": 72.6,
+    "routes": [
+      "1",
+      "101",
+      "201",
+      "202"
+    ],
+    "nearbyMetroStation": "kankaria_east"
+  },
+  {
+    "id": "maninagar_char_rasta",
+    "name": "Maninagar Char Rasta",
+    "nameGu": "મણિનગર ચાર રસ્તા",
+    "nameHi": "मणिनगर चार रास्ता",
+    "lat": 23.0005,
+    "lng": 72.6015,
+    "routes": [
+      "1",
+      "101",
+      "103"
+    ],
+    "nearbyMetroStation": "kankaria_east"
+  },
+  {
+    "id": "kankaria",
+    "name": "Kankaria",
+    "nameGu": "કાંકરિયા",
+    "nameHi": "कांकरिया",
+    "lat": 23.0075,
+    "lng": 72.6012,
+    "routes": [
+      "1",
+      "101",
+      "601"
+    ],
+    "nearbyMetroStation": "kankaria_east"
+  },
+  {
+    "id": "saraspur",
+    "name": "Saraspur",
+    "nameGu": "સરાસપુર",
+    "nameHi": "सरासपुर",
+    "lat": 23.0662,
+    "lng": 72.6092,
+    "routes": [
+      "2",
+      "301"
+    ],
+    "nearbyMetroStation": null
+  },
+  {
+    "id": "civil_hospital",
+    "name": "Civil Hospital (Asarwa)",
+    "nameGu": "સિવિલ હોસ્પિટલ (અસારવા)",
+    "nameHi": "सिविल हॉस्पिटल (असारवा)",
+    "lat": 23.043,
+    "lng": 72.5965,
+    "routes": [
+      "2",
+      "301",
+      "601"
+    ],
+    "nearbyMetroStation": null
+  },
+  {
+    "id": "naroda_gam",
+    "name": "Naroda Gam",
+    "nameGu": "નારોડા ગામ",
+    "nameHi": "नारोडा गाम",
+    "lat": 23.0438,
+    "lng": 72.6462,
+    "routes": [
+      "2",
+      "301",
+      "502"
+    ],
+    "nearbyMetroStation": null
+  },
+  {
+    "id": "naroda",
+    "name": "Naroda",
+    "nameGu": "નારોડા",
+    "nameHi": "नारोडा",
+    "lat": 23.0485,
+    "lng": 72.6578,
+    "routes": [
+      "2",
+      "301",
+      "502"
+    ],
+    "nearbyMetroStation": null
+  },
+  {
+    "id": "ctm",
+    "name": "CTM",
+    "nameGu": "સી.ટી.એમ.",
+    "nameHi": "सीटीएम",
+    "lat": 22.9878,
+    "lng": 72.6225,
+    "routes": [
+      "102",
+      "501",
+      "502"
+    ],
+    "nearbyMetroStation": null
+  },
+  {
+    "id": "narol",
+    "name": "Narol",
+    "nameGu": "નારોલ",
+    "nameHi": "नारोल",
+    "lat": 22.962,
+    "lng": 72.6405,
+    "routes": [
+      "102",
+      "103",
+      "501"
+    ],
+    "nearbyMetroStation": null
+  },
+  {
+    "id": "ghee_kanta",
+    "name": "Ghee Kanta",
+    "nameGu": "ઘી કંટા",
+    "nameHi": "घी कांटा",
+    "lat": 23.0462,
+    "lng": 72.5882,
+    "routes": [
+      "301",
+      "601"
+    ],
+    "nearbyMetroStation": "ghee_kanta"
+  },
+  {
+    "id": "kalupur_railway_station",
+    "name": "Kalupur Railway Station",
+    "nameGu": "કાલુપુર રેલવે સ્ટેશન",
+    "nameHi": "कालूपुर रेलवे स्टेशन",
+    "lat": 23.0263,
+    "lng": 72.5798,
+    "routes": [
+      "301",
+      "601"
+    ],
+    "nearbyMetroStation": "kalupur_railway_station"
+  },
+  {
+    "id": "lal_darwaja",
+    "name": "Lal Darwaja",
+    "nameGu": "લાલ દરવાજા",
+    "nameHi": "लाल दरवाज़ा",
+    "lat": 23.0286,
+    "lng": 72.5872,
+    "routes": [
+      "301",
+      "601"
+    ],
+    "nearbyMetroStation": "kalupur_railway_station"
+  },
+  {
+    "id": "shahpur",
+    "name": "Shahpur",
+    "nameGu": "શાહપુર",
+    "nameHi": "शाहपुर",
+    "lat": 23.0432,
+    "lng": 72.5788,
+    "routes": [
+      "301",
+      "601"
+    ],
+    "nearbyMetroStation": "shahpur"
+  },
+  {
+    "id": "amts_cantt",
+    "name": "Cantt. Railway Station (AMTS)",
+    "nameGu": "કેન્ટ. રેલ્વે સ્ટેશન (AMTS)",
+    "nameHi": "कैंट. रेलवे स्टेशन (AMTS)",
+    "lat": 23.0305,
+    "lng": 72.483,
+    "routes": [
+      "10",
+      "10U"
+    ],
+    "nearbyMetroStation": "kalupur_railway_station",
+    "network": "AMTS"
+  },
+  {
+    "id": "amts_rakhial",
+    "name": "Rakhial (AMTS)",
+    "nameGu": "રખિયાલ (AMTS)",
+    "nameHi": "रखियाल (AMTS)",
+    "lat": 23.033,
+    "lng": 72.559,
+    "routes": [
+      "10",
+      "58"
+    ],
+    "nearbyMetroStation": null,
+    "network": "AMTS"
+  },
+  {
+    "id": "amts_airport",
+    "name": "Airport (AMTS)",
+    "nameGu": "એરપોર્ટ (AMTS)",
+    "nameHi": "हवाई अड्डा (AMTS)",
+    "lat": 23.069,
+    "lng": 72.63,
+    "routes": [
+      "10"
+    ],
+    "nearbyMetroStation": null,
+    "network": "AMTS"
+  },
+  {
+    "id": "amts_naroda",
+    "name": "Naroda (AMTS)",
+    "nameGu": "નરોડા (AMTS)",
+    "nameHi": "नरोडा (AMTS)",
+    "lat": 23.068,
+    "lng": 72.647,
+    "routes": [
+      "58",
+      "10U"
+    ],
+    "nearbyMetroStation": null,
+    "network": "AMTS"
+  }
+]
