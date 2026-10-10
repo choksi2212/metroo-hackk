@@ -473,12 +473,27 @@ export default function App() {
             <div className="fare-split" data-testid="fare-split">
               <h3>{t.fareSplitTitle || 'How the fare splits (one NCMC ticket, settled between operators)'}</h3>
               <ul>
-                {routes[activeRoute].legs.filter(l => l.type === 'metro' || l.type === 'brts' || l.type === 'auto').map((leg, i) => (
-                  <li key={i}>
-                    <span>{leg.type === 'metro' ? (data.translations?.[lang]?.lines?.[leg.line] || LINE_NAMES[leg.line]) : leg.type === 'brts' ? (leg.network === 'AMTS' ? 'AMTS' : 'BRTS') : 'Auto'}</span>
-                    <strong>₹{leg.type === 'metro' ? metroFare(leg.km) : leg.type === 'brts' ? (leg.network === 'AMTS' ? 8 : 7) : (leg.autoCost || 0)}</strong>
-                  </li>
-                ))}
+                {(() => {
+                  const legs = routes[activeRoute].legs
+                  // Metro charges ONE fare for the whole journey (distance-based), not per line —
+                  // the clearinghouse settles GMRC the trip fare, each bus operator per ride.
+                  const metroKm = legs.filter(l => l.type === 'metro').reduce((sum, l) => sum + (l.km || 0), 0)
+                  const rows = []
+                  if (metroKm > 0) rows.push({ name: 'Metro (GMRC)', amt: metroFare(metroKm) })
+                  const busRides = {}
+                  legs.filter(l => l.type === 'brts').forEach(l => {
+                    const net = l.network === 'AMTS' ? 'AMTS' : 'BRTS'
+                    busRides[net] = (busRides[net] || 0) + 1
+                  })
+                  Object.entries(busRides).forEach(([net, n]) => rows.push({ name: net + (n > 1 ? ' ×' + n : ''), amt: (net === 'AMTS' ? 8 : 7) * n }))
+                  legs.filter(l => l.type === 'auto').forEach(l => rows.push({ name: 'Auto', amt: l.autoCost || 0 }))
+                  return rows.map((r, i) => (
+                    <li key={i}>
+                      <span>{r.name}</span>
+                      <strong>₹{r.amt}</strong>
+                    </li>
+                  ))
+                })()}
               </ul>
               <p className="fare-split-note">{t.fareSplitNote || 'Commuter pays once via NCMC; a transit clearinghouse settles each operator its leg fare. This is the PPP: the clearinghouse is privately run, operators pay per settled ticket.'}</p>
             </div>

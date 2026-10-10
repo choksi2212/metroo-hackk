@@ -1,0 +1,77 @@
+{
+  "scenarios": [
+    {
+      "id": "demo1",
+      "title": "Mahatma Mandir → MSI Service Center, Bodakdev",
+      "pitch": "The flagship demo: a newcomer at the hackathon venue plans a cross-city journey to a Bodakdev service center — metro with one interchange, then BRTS last mile.",
+      "origin": "mahatma_mandir",
+      "originType": "station",
+      "destination": "msi_service_center",
+      "expect": {
+        "route": "Yellow Line → Red Line at Motera → Blue Line at Old High Court → exit Thaltej → BRTS to Iskon Cross Road",
+        "fallbackTest": "Mark Thaltej Gate 1 exit unavailable → app picks Kalupur BRTS or walk alternative"
+      }
+    },
+    {
+      "id": "demo2",
+      "title": "Ahmedabad Railway Station → Gujarat University",
+      "pitch": "Newcomer lands at Kalupur railway station and needs the university: one-seat Blue Line ride with the correct exit gate.",
+      "origin": "kalupur_railway_station",
+      "originType": "station",
+      "destination": "gujarat_university",
+      "expect": {
+        "route": "Blue Line direct, exit Gate 1 at Gujarat University",
+        "fallbackTest": "Mark Kalupur Gate 2 unavailable → app routes via Gate 1/3"
+      }
+    },
+    {
+      "id": "demo3",
+      "title": "Airport → Gandhinagar (Mahatma Mandir)",
+      "pitch": "Airport has no metro station yet — the app honestly routes metro to the nearest practical point then auto for the last leg, exactly like a real journey planner.",
+      "origin": "svp_airport",
+      "originType": "place",
+      "destination": "mahatma_mandir",
+      "expect": {
+        "route": "Auto to Motera Stadium → Yellow Line to Mahatma Mandir",
+        "fallbackTest": "n/a"
+      }
+    },
+    {
+      "id": "demo4",
+      "title": "APMC → Civil Hospital",
+      "pitch": "Red Line north + Blue Line east with a BRTS last mile into the hospital campus.",
+      "origin": "apmc",
+      "originType": "station",
+      "destination": "civil_hospital",
+      "expect": {
+        "route": "Red Line → Old High Court → Blue Line → Kalupur → BRTS to Civil Hospital stop",
+        "fallbackTest": "Mark BRTS unavailable → app shows walk/auto fallback"
+      }
+    },
+    {
+      "id": "demo5",
+      "title": "Destination with an unavailable exit",
+      "pitch": "Operator marks Thaltej Gate 1 unavailable (lift failure). The app re-routes via BRTS instead of a long walk, explaining why.",
+      "origin": "mahatma_mandir",
+      "originType": "station",
+      "destination": "msi_service_center",
+      "disruptions": {"exits": ["thaltej_g1"]},
+      "expect": {
+        "route": "Fallback avoids the closed gate",
+        "fallbackTest": "Reason message shown"
+      }
+    },
+    {
+      "id": "demo6",
+      "title": "Metro + BRTS connection demo",
+      "pitch": "Civil Hospital via Kalupur BRTS demonstrates multimodal last-mile with exact stop names.",
+      "origin": "old_high_court",
+      "originType": "station",
+      "destination": "civil_hospital",
+      "expect": {
+        "route": "Blue Line → Kalupur → BRTS",
+        "fallbackTest": "n/a"
+      }
+    }
+  ]
+}
