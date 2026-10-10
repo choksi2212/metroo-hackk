@@ -64,7 +64,7 @@ body {
 }
 .brand-mark img { width: 100%; height: 100%; display: block; }
 .brand-text h1 { font-size: 1.02rem; line-height: 1.2; letter-spacing: -0.015em; font-weight: 600; }
-.tagline { font-size: 0.72rem; color: #334155; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tagline { font-size: 0.72rem; color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .header-actions { display: flex; align-items: center; gap: 8px; }
 .net-pill {
@@ -193,7 +193,7 @@ section h2 { display: flex; align-items: center; gap: 8px; }
 }
 .place-info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .place-name { font-weight: 700; font-size: 0.98rem; }
-.place-area { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.35; overflow-wrap: anywhere; }
+.place-area { font-size: 0.8rem; color: var(--ink-soft); }
 .place-card > svg { color: #94a3b8; }
 
 .empty { color: var(--ink-soft); text-align: center; padding: 32px 12px; }
@@ -395,17 +395,6 @@ section h2 { display: flex; align-items: center; gap: 8px; }
   .icon-btn { min-width: 40px; min-height: 40px; }
 }
 
-/* ---------- Tiny screens (<=350px) ---------- */
-@media (max-width: 350px) {
-  .header { padding: 8px 10px; row-gap: 6px; }
-  .main { padding: 12px 10px calc(84px + env(safe-area-inset-bottom, 0px)); }
-  .search-box { padding: 5px 12px; }
-  .chip { padding: 8px 10px; font-size: 0.8rem; }
-  .route-nums { gap: 8px; font-size: 0.75rem; }
-  .step { gap: 8px; padding: 10px 2px; }
-  .detail-stats { gap: 10px; font-size: 0.85rem; }
-}
-
 /* ---------- Small screens (375px) ---------- */
 @media (max-width: 380px) {
   .header { padding: 10px 12px; gap: 8px; }
@@ -421,3 +410,67 @@ section h2 { display: flex; align-items: center; gap: 8px; }
   .demo-panel { padding: 12px; }
   .step { gap: 10px; }
 }
+
+
+/* ---------- Motion: staggered entrance + tactile press ---------- */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.place-card, .station-row, .route-card, .saved-card, .dest-hero, .detail-hero, .search-box, .btn {
+  animation: rise 0.22s ease-out both;
+}
+
+/* staggered lists: each card arrives slightly after the previous */
+.place-list li:nth-child(1) .place-card, .station-list li:nth-child(1) .station-row { animation-delay: 0s; }
+.place-list li:nth-child(2) .place-card, .station-list li:nth-child(2) .station-row { animation-delay: 0.025s; }
+.place-list li:nth-child(3) .place-card, .station-list li:nth-child(3) .station-row { animation-delay: 0.05s; }
+.place-list li:nth-child(4) .place-card, .station-list li:nth-child(4) .station-row { animation-delay: 0.075s; }
+.place-list li:nth-child(5) .place-card, .station-list li:nth-child(5) .station-row { animation-delay: 0.1s; }
+.place-list li:nth-child(6) .place-card, .station-list li:nth-child(6) .station-row { animation-delay: 0.125s; }
+.place-list li:nth-child(n+7) .place-card, .station-list li:nth-child(n+7) .station-row { animation-delay: 0.15s; }
+.routes-screen .route-card:nth-child(1) { animation-delay: 0s; }
+.routes-screen .route-card:nth-child(2) { animation-delay: 0.06s; }
+.routes-screen .route-card:nth-child(3) { animation-delay: 0.12s; }
+
+/* steps draw in sequence when details open */
+.steps .step { animation: rise 0.2s ease-out both; }
+.steps .step:nth-child(1) { animation-delay: 0.02s; }
+.steps .step:nth-child(2) { animation-delay: 0.07s; }
+.steps .step:nth-child(3) { animation-delay: 0.12s; }
+.steps .step:nth-child(4) { animation-delay: 0.17s; }
+.steps .step:nth-child(5) { animation-delay: 0.22s; }
+.steps .step:nth-child(6) { animation-delay: 0.27s; }
+.steps .step:nth-child(7) { animation-delay: 0.32s; }
+.steps .step:nth-child(n+8) { animation-delay: 0.37s; }
+
+/* route card selection: crisp border snap, no glow */
+.route-card { transition: border-color 0.18s ease, transform 0.18s ease; }
+.route-card:active { transform: scale(0.985); }
+
+/* toast slides up */
+.toast { animation: toast-in 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.2) both; }
+@keyframes toast-in {
+  from { opacity: 0; transform: translate(-50%, 12px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .place-card, .station-row, .route-card, .saved-card, .dest-hero, .detail-hero, .search-box, .btn,
+  .steps .step, .toast { animation: none; }
+}
+
+
+/* ---------- Fare split (PPP) ---------- */
+.fare-split {
+  margin-top: 18px; background: var(--card);
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.fare-split h3 { font-size: 0.85rem; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+.fare-split ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.fare-split li { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.fare-split li:last-child { border-bottom: none; }
+.fare-split li strong { font-variant-numeric: tabular-nums; }
+.fare-split-note { font-size: 0.75rem; color: var(--ink-soft); line-height: 1.45; margin-top: 10px; }
