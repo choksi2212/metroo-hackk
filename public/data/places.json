@@ -51,7 +51,7 @@
     "category": "hospital",
     "lat": 23.0447,
     "lng": 72.5995,
-    "hint": "trauma center campus"
+    "hint": "Asarwa, trauma center campus"
   },
   {
     "id": "apmc_market",
@@ -70,5 +70,239 @@
     "lat": 23.224,
     "lng": 72.578,
     "hint": "Convention & exhibition centre"
+  },
+  {
+    "id": "iim_ahmedabad",
+    "name": "IIM Ahmedabad",
+    "area": "Vastrapur",
+    "category": "college",
+    "lat": 23.0345,
+    "lng": 72.5045,
+    "hint": "Indian Institute of Management, Vastrapur"
+  },
+  {
+    "id": "iskcon_temple",
+    "name": "ISKCON Temple",
+    "area": "SG Highway",
+    "category": "landmark",
+    "lat": 23.0295,
+    "lng": 72.5085,
+    "hint": "Hare Krishna Mandir, Iskon Cross Road"
+  },
+  {
+    "id": "ahmedabad_one_mall",
+    "name": "Ahmedabad One Mall",
+    "area": "Vastrapur",
+    "category": "mall",
+    "lat": 23.0367,
+    "lng": 72.5285,
+    "hint": "Formerly Alpha One, near Vastrapur Lake"
+  },
+  {
+    "id": "vastrapur_lake",
+    "name": "Vastrapur Lake & Garden",
+    "area": "Vastrapur",
+    "category": "landmark",
+    "lat": 23.0361,
+    "lng": 72.5302,
+    "hint": "Lake garden, boating"
+  },
+  {
+    "id": "sabarmati_ashram",
+    "name": "Sabarmati Ashram",
+    "area": "Sabarmati",
+    "category": "landmark",
+    "lat": 23.0605,
+    "lng": 72.466,
+    "hint": "Gandhi's ashram on the riverfront"
+  },
+  {
+    "id": "riverfront_park",
+    "name": "Sabarmati Riverfront Park",
+    "area": "Usmanpura",
+    "category": "landmark",
+    "lat": 23.033,
+    "lng": 72.4575,
+    "hint": "Nehru Bridge to Usmanpura stretch"
+  },
+  {
+    "id": "kankaria_lake",
+    "name": "Kankaria Lake & Zoo",
+    "area": "Maninagar",
+    "category": "landmark",
+    "lat": 23.017,
+    "lng": 72.493,
+    "hint": "Lakefront, Balvatika, zoo"
+  },
+  {
+    "id": "narendra_modi_stadium",
+    "name": "Narendra Modi Stadium",
+    "area": "Motera",
+    "category": "landmark",
+    "lat": 23.0899,
+    "lng": 72.4706,
+    "hint": "World's largest cricket stadium"
+  },
+  {
+    "id": "science_city",
+    "name": "Gujarat Science City",
+    "area": "Hebatpur",
+    "category": "landmark",
+    "lat": 23.077,
+    "lng": 72.4497,
+    "hint": "Science park & aquarium"
+  },
+  {
+    "id": "adalaj_stepwell",
+    "name": "Adalaj Stepwell",
+    "area": "Adalaj",
+    "category": "landmark",
+    "lat": 23.1667,
+    "lng": 72.578,
+    "hint": "15th-century stepwell, Gandhinagar road"
+  },
+  {
+    "id": "akshardham_temple",
+    "name": "Akshardham Temple",
+    "area": "Sector 20, Gandhinagar",
+    "category": "landmark",
+    "lat": 23.23,
+    "lng": 72.565,
+    "hint": "Swaminarayan temple complex"
+  },
+  {
+    "id": "gift_city",
+    "name": "GIFT City",
+    "area": "Gandhinagar",
+    "category": "tech",
+    "lat": 23.159,
+    "lng": 72.54,
+    "hint": "Gujarat International Finance Tec-City"
+  },
+  {
+    "id": "pdpu",
+    "name": "PDEU (PDPU)",
+    "area": "Raysan",
+    "category": "college",
+    "lat": 23.157,
+    "lng": 72.529,
+    "hint": "Pandit Deendayal Energy University"
+  },
+  {
+    "id": "infocity",
+    "name": "Infocity",
+    "area": "Sector 28, Gandhinagar",
+    "category": "tech",
+    "lat": 23.185,
+    "lng": 72.54,
+    "hint": "IT park, Gandhinagar"
+  },
+  {
+    "id": "himalaya_mall",
+    "name": "Himalaya Mall",
+    "area": "Drive-In Road",
+    "category": "mall",
+    "lat": 23.0655,
+    "lng": 72.487,
+    "hint": "Multiplex + shopping, Gurukul side"
+  },
+  {
+    "id": "law_garden",
+    "name": "Law Garden Street Market",
+    "area": "Ellisbridge",
+    "category": "market",
+    "lat": 23.0358,
+    "lng": 72.4628,
+    "hint": "Evening street-food + handicraft market"
+  },
+  {
+    "id": "maninagar_plaza",
+    "name": "Maninagar Plaza",
+    "area": "Maninagar",
+    "category": "market",
+    "lat": 22.991,
+    "lng": 72.482,
+    "hint": "South Ahmedabad hub"
+  },
+  {
+    "id": "swaminarayan_temple_kalupur",
+    "name": "Swaminarayan Temple",
+    "area": "Kalupur",
+    "category": "landmark",
+    "lat": 23.0289,
+    "lng": 72.486,
+    "hint": "Historic 1822 temple in old city"
+  },
+  {
+    "id": "sardar_patel_museum",
+    "name": "Sardar Vallabhbhai Patel National Memorial",
+    "area": "Shahibaug",
+    "category": "landmark",
+    "lat": 23.036,
+    "lng": 72.483,
+    "hint": "Moti Shahi Mahal, Shahibaug"
+  },
+  {
+    "id": "gujarat_college",
+    "name": "Gujarat College",
+    "area": "Ellisbridge",
+    "category": "college",
+    "lat": 23.022,
+    "lng": 72.461,
+    "hint": "Old campus near Paldi"
+  },
+  {
+    "id": "jivraj_park_market",
+    "name": "Jivraj Park Circle",
+    "area": "Jivraj",
+    "category": "market",
+    "lat": 22.9955,
+    "lng": 72.4955,
+    "hint": "Vegetable market + Ashram Rd south"
+  },
+  {
+    "id": "manek_chowk",
+    "name": "Manek Chowk Food Street",
+    "area": "Old City",
+    "category": "landmark",
+    "lat": 23.018,
+    "lng": 72.464,
+    "hint": "Manek Chowk area, old city"
+  },
+  {
+    "id": "gandhinagar_sector_16",
+    "name": "Gandhinagar Sector 16 Market",
+    "area": "Sector 16, Gandhinagar",
+    "category": "market",
+    "lat": 23.212,
+    "lng": 72.568,
+    "hint": "Bazaar + food street"
+  },
+  {
+    "id": "gandhinagar_sector_21",
+    "name": "Gandhinagar Sector 21",
+    "area": "Sector 21, Gandhinagar",
+    "category": "market",
+    "lat": 23.195,
+    "lng": 72.553,
+    "hint": "Shopping + eateries near Sachivalaya"
+  },
+  {
+    "id": "sargasan_hub",
+    "name": "Sargasan Circle",
+    "area": "Sargasan",
+    "category": "landmark",
+    "lat": 23.18,
+    "lng": 72.548,
+    "hint": "North-west Gandhinagar gateway"
+  },
+  {
+    "id": "zundal_circle",
+    "name": "Zundal Circle",
+    "area": "Zundal",
+    "category": "landmark",
+    "lat": 23.128,
+    "lng": 72.525,
+    "hint": "SG Highway junction, Zundal"
   }
 ]
