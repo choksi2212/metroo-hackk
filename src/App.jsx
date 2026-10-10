@@ -402,7 +402,7 @@ export default function App() {
                         </button>
                       ))}
                       {brtsUsed && (
-                        <button className={`demo-btn ${disruptions.brts.length ? 'demo-on' : ''}`} onClick={() => toggleDisruption('brts', routes[activeRoute].legs.find(l => l.type === 'brts')?.from || 'kalupur_brts')}>
+                        <button className={`demo-btn ${disruptions.brts.length ? 'demo-on' : ''}`} onClick={() => { const leg = routes[activeRoute].legs.find(l => l.type === 'brts'); if (leg) toggleDisruption('brts', leg.from.split(':')[1]) }}>
                           <X size={14} /> {t.markBrtsUnavailable}
                         </button>
                       )}
