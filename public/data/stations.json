@@ -1,0 +1,337 @@
+[
+  {
+    "id": "thaltej_gam",
+    "name": "Thaltej Gam",
+    "nameGu": "થલતેજ ગામ",
+    "nameHi": "थलतेज गाम",
+    "lat": 23.05021,
+    "lng": 72.50701,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Toward Thaltej village & Sardar Patel Ring Road)"
+    ],
+    "parking": true,
+    "interchange": false
+  },
+  {
+    "id": "thaltej",
+    "name": "Thaltej",
+    "nameGu": "થલતેજ",
+    "nameHi": "थलतेज",
+    "lat": 23.04975,
+    "lng": 72.51602,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Sarkhej–Gandhinagar (SG) Highway)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "doordarshan_kendra",
+    "name": "Doordarshan Kendra",
+    "nameGu": "દૂરદર્શન કેન્દ્ર",
+    "nameHi": "दूरदर्शन केंद्र",
+    "lat": 23.04818,
+    "lng": 72.52442,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Doordarshan TV studio)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "gurukul_road",
+    "name": "Gurukul Road",
+    "nameGu": "ગુરુકુળ રોડ",
+    "nameHi": "गुरुकुल रोड",
+    "lat": 23.04588,
+    "lng": 72.53487,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Gurukul bus stop & Drive-In Road)",
+      "Gate 2 (Memnagar residential area)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "gujarat_university",
+    "name": "Gujarat University",
+    "nameGu": "ગુજરાત યુનિવર્સિટી",
+    "nameHi": "गुजरात यूनिवर्सिटी",
+    "lat": 23.04485,
+    "lng": 72.54353,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Gujarat University main gate)",
+      "Gate 2 (Navrangpura, 132 Ft Ring Road)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "commerce_six_roads",
+    "name": "Commerce Six Roads",
+    "nameGu": "કોમર્સ છ રસ્તા",
+    "nameHi": "कॉमर्स सिक्स रोड्स",
+    "lat": 23.0407,
+    "lng": 72.55297,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Commerce Six Roads junction)",
+      "Gate 2 (Navrangpura residential)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "sp_stadium",
+    "name": "SP Stadium",
+    "nameGu": "એસ પી સ્ટેડિયમ",
+    "nameHi": "एसपी स्टेडियम",
+    "lat": 23.03984,
+    "lng": 72.56168,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Sardar Patel Stadium entrance)",
+      "Gate 2 (Ashram Road, toward Paldi)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "old_high_court",
+    "name": "Old High Court",
+    "nameGu": "જૂની હાઇ કોર્ટ",
+    "nameHi": "ओल्ड हाई कोर्ट",
+    "lat": 23.03729,
+    "lng": 72.56721,
+    "lines": [
+      "blue",
+      "red"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Red Line platform side)",
+      "Gate 2 (Blue Line platform side)",
+      "Gate 3 (Ashram Road footpath)"
+    ],
+    "parking": false,
+    "interchange": true
+  },
+  {
+    "id": "shahpur",
+    "name": "Shahpur",
+    "nameGu": "શાહપુર",
+    "nameHi": "शाहपुर",
+    "lat": 23.03921,
+    "lng": 72.58103,
+    "lines": [
+      "blue"
+    ],
+    "elev": "underground",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Shahpur UG entrance, Laldarwaja side)",
+      "Gate 2 (Ellisbridge / Ashram Road)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "ghee_kanta",
+    "name": "Ghee Kanta",
+    "nameGu": "ઘીકાંટા",
+    "nameHi": "घीकांटा",
+    "lat": 23.02879,
+    "lng": 72.58678,
+    "lines": [
+      "blue"
+    ],
+    "elev": "underground",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Ghee Kanta circle & old-city market)",
+      "Gate 2 (Saraspur side lanes)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "kalupur_railway_station",
+    "name": "Kalupur Railway Station",
+    "nameGu": "કાલુપુર રેલ્વે સ્ટેશન",
+    "nameHi": "कालुपुर रेलवे स्टेशन",
+    "lat": 23.02469,
+    "lng": 72.60314,
+    "lines": [
+      "blue"
+    ],
+    "elev": "underground",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Kalupur Railway Station forecourt)",
+      "Gate 2 (Ahmedabad Junction main building)",
+      "Gate 3 (Saraspur side)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "kankaria_east",
+    "name": "Kankaria East",
+    "nameGu": "કાંકરિયા પૂર્વ",
+    "nameHi": "कांकरिया पूर्व",
+    "lat": 23.01546,
+    "lng": 72.607,
+    "lines": [
+      "blue"
+    ],
+    "elev": "underground",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Kankaria Lake east entrance)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "apparel_park",
+    "name": "Apparel Park",
+    "nameGu": "એપેરલ પાર્ક",
+    "nameHi": "एपेरल पार्क",
+    "lat": 23.01067,
+    "lng": 72.61801,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Apparel Park industrial estate)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "amraiwadi",
+    "name": "Amraiwadi",
+    "nameGu": "અમરાઈવાડી",
+    "nameHi": "अमराईवाड़ी",
+    "lat": 23.00767,
+    "lng": 72.62873,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Amraiwadi main road)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "rabari_colony",
+    "name": "Rabari Colony",
+    "nameGu": "રબારી કોલોની",
+    "nameHi": "रबारी कॉलोनी",
+    "lat": 23.00547,
+    "lng": 72.63541,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Rabari Colony chawl market)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "vastral",
+    "name": "Vastral",
+    "nameGu": "વસ્ત્રાલ",
+    "nameHi": "वस्त्राल",
+    "lat": 23.0036,
+    "lng": 72.64759,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Vastral main market road)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "nirant_cross_road",
+    "name": "Nirant Cross Road",
+    "nameGu": "નિરાંત ક્રોસ રોડ",
+    "nameHi": "निरंत क्रॉस रोड",
+    "lat": 22.99972,
+    "lng": 72.65889,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Nirant Cross Road)"
+    ],
+    "parking": false,
+    "interchange": false
+  },
+  {
+    "id": "vastral_gam",
+    "name": "Vastral Gam",
+    "nameGu": "વસ્ત્રાલ ગામ",
+    "nameHi": "वस्त्राल गाम",
+    "lat": 22.99714,
+    "lng": 72.66739,
+    "lines": [
+      "blue"
+    ],
+    "elev": "elevated",
+    "accessibility": true,
+    "exits": [
+      "Gate 1 (Vastral Gam village road)"
+    ],
+    "parking": true,
+    "interchange": false
+  }
+]
