@@ -40,26 +40,34 @@ YatraSetu models those hand-offs in one local journey graph. It is designed as a
 
 ## System architecture
 
-```mermaid
-flowchart LR
-    U[Commuter] --> UI[React interface]
-    UI --> SEARCH[Destination search]
-    UI --> GPS[Browser geolocation]
-    UI --> ROUTE[Route planner]
-    UI --> SAVE[LocalStorage]
-    UI --> MAP[SVG network map]
+```text
+                         +----------------------+
+                         |      Commuter        |
+                         +----------+-----------+
+                                    |
+                         +----------v-----------+
+                         |    React interface   |
+                         +--+----+----+----+----+
+                            |    |    |    |
+                 +----------+    |    |    +----------> SVG network map
+                 |               |    +---------------> LocalStorage
+                 v               v
+        Destination search   Browser GPS
+                 |               |
+                 v               v
+        Local JSON datasets  Nearest station
+                 |               |
+                 +-------+-------+
+                         v
+                 Multimodal graph
+                         |
+                         v
+                   Dijkstra engine
+                         |
+                         v
+             Fastest / Cheapest / Least walking
 
-    SEARCH --> DATA[Local JSON datasets]
-    GPS --> NEAR[Nearest-station resolver]
-    NEAR --> ROUTE
-    DATA --> GRAPH[Multimodal graph builder]
-    GRAPH --> ROUTE
-    ROUTE --> DIJKSTRA[Dijkstra shortest path]
-    DIJKSTRA --> OPTIONS[Fastest / Cheapest / Least walking]
-    OPTIONS --> UI
-
-    SW[Service worker] --> CACHE[Precached app shell + data]
-    CACHE --> UI
+     Service worker ---> Precached app shell + local data ---> React interface
 ```
 
 ### Architectural principles
@@ -72,37 +80,24 @@ flowchart LR
 
 ## End-to-end control flow
 
-```mermaid
-sequenceDiagram
-    participant C as Commuter
-    participant A as React app
-    participant D as Local datasets
-    participant G as Geolocation
-    participant R as Route engine
-    participant S as LocalStorage
-
-    C->>A: Search for a destination
-    A->>D: Score local place records
-    D-->>A: Matching destinations
-    C->>A: Select destination
-    C->>A: Choose current location or metro station
-
-    alt Current location
-        A->>G: Request device position
-        G-->>A: Latitude and longitude
-        A->>D: Calculate nearest metro station
-        D-->>A: Selected station + distance
-        A-->>C: Toast confirms starting station
-    else Manual station
-        A-->>A: Use selected station directly
-    end
-
-    A->>R: origin node + destination node
-    R->>D: Read connections, fares, exits, and stops
-    R-->>A: Three route variants
-    A-->>C: Route cards with time, fare, walking, and modes
-    C->>A: Open details or save journey
-    A->>S: Persist saved journey
+```text
+  COMMUTER          REACT APP          LOCAL DATA          GPS          ROUTER       STORAGE
+      |                 |                  |                |              |             |
+      |-- search ------>|                  |                |              |             |
+      |                 |-- score -------->|                |              |             |
+      |<-- destinations-|                  |                |              |             |
+      |-- choose place->|                  |                |              |             |
+      |-- choose origin>|                  |                |              |             |
+      |                 |-- request GPS ------------------->|              |             |
+      |                 |<-- coordinates -------------------|              |             |
+      |                 |-- nearest station->|              |              |             |
+      |<-- station toast|                  |                |              |             |
+      |                 |----------------------------------------------->|             |
+      |                 |                  |<-- graph + fares ----------|             |
+      |                 |<-- route variants-----------------------------|             |
+      |<-- route cards--|                  |                |              |             |
+      |-- save journey->|------------------------------------------------------------->|
+      |<-- saved state--|                  |                |              |             |
 ```
 
 ## Routing model
@@ -137,21 +132,35 @@ The same graph is evaluated with three cost functions:
 
 After a path is found, the engine converts the raw node path into readable legs, groups consecutive metro or bus segments, calculates fare, and deduplicates equivalent itineraries.
 
-```mermaid
-flowchart TD
-    Q[Origin + destination] --> B[Build adjacency graph]
-    B --> F[Fastest cost function]
-    B --> C[Cheapest cost function]
-    B --> W[Least-walking cost function]
-    F --> D1[Dijkstra]
-    C --> D2[Dijkstra]
-    W --> D3[Dijkstra]
-    D1 --> I[Reconstruct node path]
-    D2 --> I
-    D3 --> I
-    I --> L[Convert to itinerary legs]
-    L --> P[Calculate metro / bus / auto fare]
-    P --> O[Route cards]
+```text
+                 +------------------------+
+                 | Origin + destination   |
+                 +-----------+------------+
+                             |
+                 +-----------v------------+
+                 | Build adjacency graph  |
+                 +-----+---------+--------+
+                       |         |
+             +---------+--+   +--+---------+   +------------------+
+             | Fastest    |   | Cheapest  |   | Least walking    |
+             | cost       |   | cost      |   | cost             |
+             +------+-----+   +-----+-----+   +--------+---------+
+                    |               |                  |
+                    v               v                  v
+                 Dijkstra        Dijkstra           Dijkstra
+                    |               |                  |
+                    +---------------+------------------+
+                                    v
+                         Reconstruct node paths
+                                    |
+                                    v
+                           Convert into legs
+                                    |
+                                    v
+                         Calculate fares and walking
+                                    |
+                                    v
+                              Route cards
 ```
 
 ## Data layer
@@ -182,14 +191,26 @@ The network geometry and station naming are based on the Gujarat Metro network. 
 
 ## Offline and PWA strategy
 
-```mermaid
-flowchart LR
-    FIRST[First visit] --> VITE[Vite-built app]
-    VITE --> PWA[Service worker registration]
-    PWA --> PRECACHE[Precache JS, CSS, HTML, JSON, SVG, fonts]
-    PRECACHE --> AIRPLANE[Airplane mode]
-    AIRPLANE --> APP[App shell still opens]
-    APP --> LOCAL[Local search, routing, map, and saved journeys]
+```text
+  First visit
+      |
+      v
+  Vite-built app
+      |
+      v
+  Service worker registration
+      |
+      v
+  Precache: JS, CSS, HTML, JSON, SVG, fonts
+      |
+      v
+  Airplane mode
+      |
+      v
+  App shell opens from cache
+      |
+      v
+  Local search + routing + map + saved journeys
 ```
 
 The production build generates:
