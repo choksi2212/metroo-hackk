@@ -64,7 +64,7 @@ body {
 }
 .brand-mark img { width: 100%; height: 100%; display: block; }
 .brand-text h1 { font-size: 1.02rem; line-height: 1.2; letter-spacing: -0.015em; font-weight: 600; }
-.tagline { font-size: 0.72rem; color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tagline { font-size: 0.72rem; color: #334155; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .header-actions { display: flex; align-items: center; gap: 8px; }
 .net-pill {
@@ -193,7 +193,7 @@ section h2 { display: flex; align-items: center; gap: 8px; }
 }
 .place-info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
 .place-name { font-weight: 700; font-size: 0.98rem; }
-.place-area { font-size: 0.8rem; color: var(--ink-soft); }
+.place-area { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.35; overflow-wrap: anywhere; }
 .place-card > svg { color: #94a3b8; }
 
 .empty { color: var(--ink-soft); text-align: center; padding: 32px 12px; }
@@ -393,6 +393,17 @@ section h2 { display: flex; align-items: center; gap: 8px; }
   .header-actions { order: 2; margin-left: auto; gap: 6px; }
   .header-actions .net-pill { padding: 5px 8px; font-size: 0.68rem; }
   .icon-btn { min-width: 40px; min-height: 40px; }
+}
+
+/* ---------- Tiny screens (<=350px) ---------- */
+@media (max-width: 350px) {
+  .header { padding: 8px 10px; row-gap: 6px; }
+  .main { padding: 12px 10px calc(84px + env(safe-area-inset-bottom, 0px)); }
+  .search-box { padding: 5px 12px; }
+  .chip { padding: 8px 10px; font-size: 0.8rem; }
+  .route-nums { gap: 8px; font-size: 0.75rem; }
+  .step { gap: 8px; padding: 10px 2px; }
+  .detail-stats { gap: 10px; font-size: 0.85rem; }
 }
 
 /* ---------- Small screens (375px) ---------- */
