@@ -344,5 +344,343 @@
       ],
       "transferMin": 3
     }
+  ],
+  "metroToBrts": [
+    {
+      "stationId": "thaltej",
+      "brtsId": "thaltej_gam",
+      "walkMin": 4
+    },
+    {
+      "stationId": "gurukul_road",
+      "brtsId": "gurukul",
+      "walkMin": 3
+    },
+    {
+      "stationId": "gujarat_university",
+      "brtsId": "gujarat_university",
+      "walkMin": 3
+    },
+    {
+      "stationId": "commerce_six_roads",
+      "brtsId": "navrangpura",
+      "walkMin": 2
+    },
+    {
+      "stationId": "sp_stadium",
+      "brtsId": "navrangpura",
+      "walkMin": 2
+    },
+    {
+      "stationId": "old_high_court",
+      "brtsId": "lal_darwaja",
+      "walkMin": 3
+    },
+    {
+      "stationId": "kalupur_railway_station",
+      "brtsId": "kalupur_railway_station",
+      "walkMin": 5
+    },
+    {
+      "stationId": "kankaria_east",
+      "brtsId": "kankaria",
+      "walkMin": 4
+    },
+    {
+      "stationId": "apmc",
+      "brtsId": "apmc_market",
+      "walkMin": 4
+    },
+    {
+      "stationId": "jivraj_park",
+      "brtsId": "jivraj_park",
+      "walkMin": 2
+    },
+    {
+      "stationId": "shreyas",
+      "brtsId": "jivraj_park",
+      "walkMin": 3
+    },
+    {
+      "stationId": "paldi",
+      "brtsId": "paldi",
+      "walkMin": 3
+    },
+    {
+      "stationId": "gandhigram",
+      "brtsId": "gandhigram",
+      "walkMin": 3
+    },
+    {
+      "stationId": "usmanpura",
+      "brtsId": "usmanpura",
+      "walkMin": 3
+    },
+    {
+      "stationId": "vadaj",
+      "brtsId": "vadaj",
+      "walkMin": 3
+    },
+    {
+      "stationId": "ranip",
+      "brtsId": "ranip",
+      "walkMin": 3
+    },
+    {
+      "stationId": "motera_stadium",
+      "brtsId": "motera_stadium",
+      "walkMin": 4
+    },
+    {
+      "stationId": "kalupur_railway_station",
+      "brtsId": "amts_cantt",
+      "walkMin": 6,
+      "network": "AMTS"
+    }
+  ],
+  "brtsSegments": [
+    {
+      "from": "thaltej_gam",
+      "to": "gurukul",
+      "km": 1.2
+    },
+    {
+      "from": "gurukul",
+      "to": "gujarat_university",
+      "km": 1.2
+    },
+    {
+      "from": "gujarat_university",
+      "to": "navrangpura",
+      "km": 1.0
+    },
+    {
+      "from": "navrangpura",
+      "to": "lal_darwaja",
+      "km": 0.8
+    },
+    {
+      "from": "lal_darwaja",
+      "to": "paldi",
+      "km": 1.0
+    },
+    {
+      "from": "paldi",
+      "to": "gandhigram",
+      "km": 1.0
+    },
+    {
+      "from": "gandhigram",
+      "to": "usmanpura",
+      "km": 0.9
+    },
+    {
+      "from": "usmanpura",
+      "to": "vadaj",
+      "km": 1.1
+    },
+    {
+      "from": "vadaj",
+      "to": "ranip",
+      "km": 0.9
+    },
+    {
+      "from": "ranip",
+      "to": "motera_stadium",
+      "km": 1.4
+    },
+    {
+      "from": "lal_darwaja",
+      "to": "jivraj_park",
+      "km": 1.6
+    },
+    {
+      "from": "jivraj_park",
+      "to": "apmc_market",
+      "km": 1.2
+    },
+    {
+      "from": "lal_darwaja",
+      "to": "kalupur_railway_station",
+      "km": 2.2
+    },
+    {
+      "from": "kalupur_railway_station",
+      "to": "kankaria",
+      "km": 2.4
+    },
+    {
+      "from": "paldi",
+      "to": "jivraj_park",
+      "km": 0.9
+    },
+    {
+      "from": "rto_circle",
+      "to": "motera_stadium",
+      "km": 2.6
+    },
+    {
+      "from": "iskon_cross_road",
+      "to": "thaltej_gam",
+      "km": 1.0
+    },
+    {
+      "from": "bodakdev",
+      "to": "iskon_cross_road",
+      "km": 0.6
+    },
+    {
+      "from": "gujarat_college",
+      "to": "paldi",
+      "km": 1.0
+    },
+    {
+      "from": "delhi_darwaja",
+      "to": "kalupur_railway_station",
+      "km": 1.8
+    },
+    {
+      "from": "shahpur",
+      "to": "delhi_darwaja",
+      "km": 0.8
+    },
+    {
+      "from": "shahpur",
+      "to": "lal_darwaja",
+      "km": 0.7
+    },
+    {
+      "from": "saraspur",
+      "to": "kalupur_railway_station",
+      "km": 1.2
+    },
+    {
+      "from": "saraspur",
+      "to": "ghee_kanta",
+      "km": 1.0
+    },
+    {
+      "from": "ghee_kanta",
+      "to": "maninagar_char_rasta",
+      "km": 3.2
+    },
+    {
+      "from": "maninagar",
+      "to": "maninagar_char_rasta",
+      "km": 0.5
+    },
+    {
+      "from": "maninagar",
+      "to": "kankaria",
+      "km": 1.4
+    },
+    {
+      "from": "kankaria",
+      "to": "ctm",
+      "km": 2.2
+    },
+    {
+      "from": "ctm",
+      "to": "narol",
+      "km": 2.6
+    },
+    {
+      "from": "maninagar_char_rasta",
+      "to": "ctm",
+      "km": 2.0
+    },
+    {
+      "from": "ghee_kanta",
+      "to": "civil_hospital",
+      "km": 2.6
+    },
+    {
+      "from": "civil_hospital",
+      "to": "krishna_nagar",
+      "km": 1.6
+    },
+    {
+      "from": "krishna_nagar",
+      "to": "naroda_gam",
+      "km": 1.8
+    },
+    {
+      "from": "naroda_gam",
+      "to": "naroda",
+      "km": 1.6
+    },
+    {
+      "from": "saraspur",
+      "to": "rakhiyal",
+      "km": 1.4
+    },
+    {
+      "from": "rakhiyal",
+      "to": "krishna_nagar",
+      "km": 1.6
+    },
+    {
+      "from": "paldi",
+      "to": "satellite",
+      "km": 1.6
+    },
+    {
+      "from": "satellite",
+      "to": "iskon_cross_road",
+      "km": 1.8
+    },
+    {
+      "from": "apmc_market",
+      "to": "satellite",
+      "km": 2.4
+    },
+    {
+      "from": "gujarat_college",
+      "to": "svp_hospital",
+      "km": 1.2
+    },
+    {
+      "from": "svp_hospital",
+      "to": "delhi_darwaja",
+      "km": 1.0
+    },
+    {
+      "from": "thaltej",
+      "to": "thaltej_gam",
+      "km": 0.6
+    },
+    {
+      "from": "thaltej",
+      "to": "iskon_cross_road",
+      "km": 1.0
+    },
+    {
+      "from": "rto_circle",
+      "to": "krishna_nagar",
+      "km": 2.0
+    },
+    {
+      "from": "rto_circle",
+      "to": "naroda",
+      "km": 3.0
+    },
+    {
+      "from": "amts_cantt",
+      "to": "amts_rakhial",
+      "km": 4.6,
+      "network": "AMTS"
+    },
+    {
+      "from": "amts_rakhial",
+      "to": "amts_airport",
+      "km": 4.2,
+      "network": "AMTS"
+    },
+    {
+      "from": "amts_rakhial",
+      "to": "amts_naroda",
+      "km": 4.8,
+      "network": "AMTS"
+    }
   ]
 }
