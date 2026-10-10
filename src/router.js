@@ -144,13 +144,13 @@ export function toItinerary(path, { stations, brtsStops, places, exitsArr = [], 
     } else if (type === 'brts' || type === 'brtsLastMile') {
       const routeName = edge.brtsStopName || 'BRTS'
       const network = edge.network || 'BRTS'
-      if (current && (current.type === 'brts' || current.type === 'brtsLastMile')) {
+      if (current && (current.type === 'brts' || current.type === 'brtsLastMile') && current.network === network) {
         if (prevNode === current.to) { current.to = path[i].node; current.toId = path[i].node.split(':')[1] }
         current.km += edge.km || 0
         current.stops = (current.stops || 1) + 1
       } else {
         if (current) legs.push(current)
-        current = { type: 'brts', from: prevNode, fromId: prevNode.split(':')[1], to: path[i].node, toId: path[i].node.split(':')[1], km: edge.km || 0, stops: 1, routeName: edge.brtsStopName || null }
+        current = { type: 'brts', network, from: prevNode, fromId: prevNode.split(':')[1], to: path[i].node, toId: path[i].node.split(':')[1], km: edge.km || 0, stops: 1, routeName: edge.brtsStopName || null }
       }
     } else if (type === 'walk' || type === 'walkLastMile') {
       if (current) legs.push(current)
