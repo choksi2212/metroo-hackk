@@ -1,0 +1,74 @@
+[
+  {
+    "id": "msi_service_center",
+    "name": "MSI Service Center",
+    "area": "Bodakdev",
+    "category": "service",
+    "lat": 23.031,
+    "lng": 72.511,
+    "hint": "SG Highway service lane, Bodakdev Cross Road"
+  },
+  {
+    "id": "ahmedabad_railway_station",
+    "name": "Ahmedabad Railway Station (Kalupur)",
+    "area": "Kalupur",
+    "category": "railway",
+    "lat": 23.023,
+    "lng": 72.47,
+    "hint": "Ahmedabad Junction, opposite Kalupur Metro Gate 2"
+  },
+  {
+    "id": "gandhinagar_railway_station",
+    "name": "Gandhinagar Capital Railway Station",
+    "area": "Sector 14, Gandhinagar",
+    "category": "railway",
+    "lat": 23.2246,
+    "lng": 72.6402,
+    "hint": "East Gandhinagar, near Sector 14"
+  },
+  {
+    "id": "svp_airport",
+    "name": "SVP International Airport",
+    "area": "Hansol",
+    "category": "airport",
+    "lat": 23.0722,
+    "lng": 72.6347,
+    "hint": "Terminal 1 domestic, Terminal 2 international"
+  },
+  {
+    "id": "gujarat_university",
+    "name": "Gujarat University",
+    "area": "Navrangpura",
+    "category": "college",
+    "lat": 23.0679,
+    "lng": 72.5353,
+    "hint": "Main campus, 132 Ft Ring Road"
+  },
+  {
+    "id": "civil_hospital",
+    "name": "Civil Hospital (New Civil)",
+    "area": "Asarwa",
+    "category": "hospital",
+    "lat": 23.0447,
+    "lng": 72.5995,
+    "hint": "trauma center campus"
+  },
+  {
+    "id": "apmc_market",
+    "name": "APMC Wholesale Market",
+    "area": "Vasna",
+    "category": "market",
+    "lat": 22.988,
+    "lng": 72.4988,
+    "hint": "Agricultural Produce Market Committee, Vasna"
+  },
+  {
+    "id": "mahatma_mandir",
+    "name": "Mahatma Mandir Convention Center",
+    "area": "Sector 13, Gandhinagar",
+    "category": "landmark",
+    "lat": 23.224,
+    "lng": 72.578,
+    "hint": "Convention & exhibition centre"
+  }
+]
