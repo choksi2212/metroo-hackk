@@ -1,0 +1,43 @@
+{
+  "currency": "INR",
+  "notes": "Ahmedabad Metro fares (token) approximated from GMRC fare slabs, Oct 2026. NCMC card gets 10% off.",
+  "ncmcDiscount": 0.1,
+  "metroFareSlabs": [
+    {
+      "maxKm": 2,
+      "fare": 5
+    },
+    {
+      "maxKm": 4,
+      "fare": 10
+    },
+    {
+      "maxKm": 8,
+      "fare": 15
+    },
+    {
+      "maxKm": 12,
+      "fare": 20
+    },
+    {
+      "maxKm": 16,
+      "fare": 25
+    },
+    {
+      "maxKm": 999,
+      "fare": 30
+    }
+  ],
+  "brtsFare": 7,
+  "autoFarePerKm": 15,
+  "walkSpeedKmph": 4.8,
+  "metroSpeedKmph": 32,
+  "brtsSpeedKmph": 18,
+  "autoSpeedKmph": 25,
+  "interchangePenaltyMin": 4,
+  "metroWaitMin": 7,
+  "brtsWaitMin": 5,
+  "amtsFare": 8,
+  "amtsSpeedKmph": 16,
+  "amtsWaitMin": 8
+}
